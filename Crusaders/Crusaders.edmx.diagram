@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b7495a072c5c446cbf350f3f371d3765" Name="Diagram1" >
+        <EntityTypeShape EntityType="CrusadersModel.Ticket" Width="1.5" PointX="1.125" PointY="3.25" />
+        <EntityTypeShape EntityType="CrusadersModel.GamesResult" Width="1.5" PointX="3.875" PointY="0.875" />
+        <EntityTypeShape EntityType="CrusadersModel.Game" Width="1.5" PointX="6.375" PointY="2.75" />
+        <EntityTypeShape EntityType="CrusadersModel.Player" Width="1.5" PointX="8.875" PointY="0.75" />
+        <AssociationConnector Association="CrusadersModel.ResultsGames" />
+        <AssociationConnector Association="CrusadersModel.PlayersGames" />
+        <AssociationConnector Association="CrusadersModel.GameTicket" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
