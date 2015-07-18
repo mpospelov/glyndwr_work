@@ -1,0 +1,15 @@
+﻿.carousel-inner .item {
+    width: 1140px;
+    height: 450px;
+}
+.featurette-divider {
+   border-top: 1px solid #66bb6a;
+}
+
+.featurette .col-md-7 {
+    margin-top: -125px;
+}
+
+.featurette-image.img-responsive.center-block {
+    height: 250px;
+}
