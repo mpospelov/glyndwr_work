@@ -139,6 +139,7 @@
     <Content Include="Content\fonts\Material-Design-Icons.svg" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\bootstrap.min.css" />
+    <Content Include="Content\themes\base\carousel.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -201,12 +202,14 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\Site_style.css" />
     <Content Include="Crusaders.edmx.sql" />
     <Content Include="Games\CreateGame.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\Crusaders_logo.png" />
     <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\news_1.jpg" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
     <Content Include="Images\orderedList2.png" />
@@ -217,6 +220,9 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\slide_1.jpg" />
+    <Content Include="Images\slide_2.jpg" />
+    <Content Include="Images\slide_3.jpg" />
     <Content Include="packages.config" />
     <EntityDeploy Include="Crusaders.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -277,6 +283,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Tickets\CreateTicket.aspx" />
+    <Content Include="Tickets\ShowAllTickets.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -392,6 +399,13 @@
     </Compile>
     <Compile Include="Tickets\CreateTicket.aspx.designer.cs">
       <DependentUpon>CreateTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tickets\ShowAllTickets.aspx.cs">
+      <DependentUpon>ShowAllTickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tickets\ShowAllTickets.aspx.designer.cs">
+      <DependentUpon>ShowAllTickets.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -6,68 +6,60 @@
     <meta charset="utf-8" />
     <title><%: Page.Title %> - My ASP.NET Application</title>
     <link href="/Content/themes/base/bootstrap.min.css" rel="stylesheet" />
-    <link href="/Content/themes/base/material-bootstrap/material-fullpalette.min.css" rel="stylesheet" type="text/css" />
     <link href="/Content/themes/base/material-bootstrap/material.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/themes/base/material-bootstrap/material-fullpalette.min.css" rel="stylesheet" type="text/css" />
     <link href="/Content/themes/base/material-bootstrap/ripples.min.css" rel="stylesheet" type="text/css" />
     <link href="/Content/themes/base/material-bootstrap/roboto.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/themes/base/Site_style.css" rel="stylesheet" type="text/css"/>
+    <link href="/Content/themes/base/carousel.css" rel="stylesheet" type="text/css"/>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
 
 </head>
 <body>
     <div class="container">
-        <div class="navbar navbar-default">
+        <div class="navbar navbar-material-green-400">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="javascript:void(0)">Brand</a>
+              
+                <a class="navbar-brand"  style="margin-top: -14px">
+                    <img src="\Images\Crusaders_logo.png" alt="HTML tutorial" style="width: 62px">
+                </a>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="javascript:void(0)">Active</a></li>
-                    <li><a href="javascript:void(0)">Link</a></li>
                     <li class="dropdown">
-                        <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Club<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="javascript:void(0)">Action</a></li>
-                            <li><a href="javascript:void(0)">Another action</a></li>
+                            <li><a href="javascript:void(0)">Hystory</a></li>
+                            <li><a href="javascript:void(0)">Players</a></li>
+                            <li><a href="javascript:void(0)">Statistic</a></li>
+                        </ul>
+                    </li>   
+                    <li><a href="/Tickets/ShowAllTickets.aspx">Tickets</a></li>
+                     
+
+                    <li class="dropdown">
+                        <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Games<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)">Results</a></li>
+                            <li><a href="javascript:void(0)">Future</a></li>
                             <li><a href="javascript:void(0)">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">Dropdown header</li>
-                            <li><a href="javascript:void(0)">Separated link</a></li>
-                            <li><a href="javascript:void(0)">One more separated link</a></li>
                         </ul>
                     </li>
                 </ul>
                 <form class="navbar-form navbar-left">
                     <input type="text" class="form-control col-lg-8" placeholder="Search">
                 </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="javascript:void(0)">Link</a></li>
-                    <li class="dropdown">
-                        <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="javascript:void(0)">Action</a></li>
-                            <li><a href="javascript:void(0)">Another action</a></li>
-                            <li><a href="javascript:void(0)">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="javascript:void(0)">Separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
         </div>
         <form runat="server">
             <header>
                 <div class="content-wrapper">
-                    <div class="float-left">
-                        <p class="site-title">
-                            <img src="\Images\Crusaders_logo.png" alt="HTML tutorial" style="width: 90px">
-                        </p>
-                    </div>
                     <div class="float-right">
                         <section id="login">
                             <asp:LoginView runat="server" ViewStateMode="Disabled">
@@ -81,14 +73,7 @@
                                 </LoggedInTemplate>
                             </asp:LoginView>
                         </section>
-                        <nav>
-                            <ul id="menu">
-                                <li><a runat="server" href="/">Home</a></li>
-                                <li><a runat="server" href="~/About.aspx">About</a></li>
-                                <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+                      </div>
                 </div>
             </header>
             <div id="body">
@@ -97,6 +82,7 @@
                     <asp:ContentPlaceHolder runat="server" ID="MainContent" />
                 </section>
             </div>
+            <hr class="featurette-divider">
             <footer>
                 <div class="content-wrapper">
                     <div class="float-left">

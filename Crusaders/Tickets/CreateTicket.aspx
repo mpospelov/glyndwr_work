@@ -1,30 +1,37 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateTicket.aspx.cs" Inherits="Crusaders.Tickets.CreateTicket" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreateTicket.aspx.cs" Inherits="Crusaders.Tickets.CreateTicket" %>
 
-<!DOCTYPE html>
+<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <form id="form-horizontal">
+        <fieldset>
+            <div class="form-group">
+                <asp:Label ID="TypeLbl" runat="server" Text="Type" CssClass="col-lg-2 control-label"></asp:Label>
+                <div class="col-lg-10">
+                    <asp:TextBox ID="TxtType" runat="server" CssClass="form-control" ></asp:TextBox>
+                </div>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-        <asp:Label ID="TypeLbl" runat="server" Text="Type"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TxtType" runat="server"></asp:TextBox>
-        <br />
-    
-    </div>
-        <asp:Label ID="PriceLbl" runat="server" Text="Price"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TxtPrice" runat="server"></asp:TextBox>
-        <p>
-            <asp:Label ID="DescLbl" runat="server" Text="Description"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TxtDesc" runat="server"></asp:TextBox>
-        </p>
-        <asp:Button ID="SbmBtn" runat="server" OnClick="SbmBtn_Click" Text="Submit" />
+                <asp:Label ID="PriceLbl" runat="server" Text="Price" CssClass="col-lg-2 control-label"></asp:Label>
+                <div class="col-lg-10">
+                    <asp:TextBox ID="TxtPrice" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+
+                <asp:Label ID="DescLbl" runat="server" Text="Description" CssClass="col-lg-2 control-label"></asp:Label>
+                <div class="col-lg-10">
+                    <asp:TextBox ID="TxtDesc" runat="server"  CssClass="form-control" ></asp:TextBox>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <asp:Button ID="CnlBtn" runat="server" OnClick="CnlBtn_Click" Text="Cancel" CssClass="btn btn-warning"/>
+                    <asp:Button ID="SbmBtn" runat="server" OnClick="SbmBtn_Click" Text="Submit" CssClass="btn btn-primary"/>
+                </div>
+            </div>
+        </fieldset>
     </form>
-</body>
-</html>
+</asp:Content>
+
+
+
+
+
+

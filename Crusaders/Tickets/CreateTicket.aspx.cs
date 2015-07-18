@@ -26,5 +26,10 @@ namespace Crusaders.Tickets
             db.SaveChanges();
 
         }
+
+        protected void CnlBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
