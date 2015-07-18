@@ -1,26 +1,20 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreateTicket.aspx.cs" Inherits="Crusaders.Tickets.CreateTicket" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ShowAllTickets.aspx.cs" Inherits="Crusaders.Tickets.ShowAll" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Price</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>    
+    <form runat="server">
+        <div class="table-responsive">
+            <asp:Table ID="TicketsTable" runat="server" CssClass="table table-striped" OnDataBinding="Page_Load">
+                <asp:TableHeaderRow>
+                    <asp:TableHeaderCell>Type</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Price</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Description</asp:TableHeaderCell>
+                </asp:TableHeaderRow>
+                <asp:TableRow>
+                    <asp:TableCell>Children</asp:TableCell>
+                    <asp:TableCell>1000 £</asp:TableCell>
+                    <asp:TableCell>Super sale</asp:TableCell>
+                </asp:TableRow>
+            </asp:Table>
+        </div>
+    </form>
 </asp:Content>

@@ -11,7 +11,21 @@ namespace Crusaders.Tickets
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            CrusadersEntities db = new CrusadersEntities();
+            foreach (Ticket ticket in db.Tickets.ToList()) {
+                TableRow row = new TableRow();
+                TableCell typeCell = new TableCell(); 
+                typeCell.Text = ticket.Type;
+                TableCell priceCell = new TableCell(); 
+                priceCell.Text = ticket.Price; 
+                TableCell descCell = new TableCell(); 
+                descCell.Text = ticket.Description;
+                row.Cells.Add(typeCell);
+                row.Cells.Add(priceCell);
+                row.Cells.Add(descCell);
+                TicketsTable.Rows.Add(row);
+            }
+            
         }
     }
 }
