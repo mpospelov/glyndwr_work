@@ -53,8 +53,9 @@
     <Property Name="Venue" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Comp" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Data" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Result_id" Type="int" Nullable="false" />
-    <Property Name="Player_id" Type="int" Nullable="false" />
+    <Property Name="Image" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Result_id" Type="int" Nullable="true" />
+    <Property Name="Player_id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="Players1">
     <Key>
@@ -67,7 +68,7 @@
     <Property Name="Position" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <Association Name="ResultsGames">
-    <End Role="Results" Type="CrusadersModel.Store.GamesResults" Multiplicity="1" />
+    <End Role="Results" Type="CrusadersModel.Store.GamesResults" Multiplicity="0..1" />
     <End Role="Games" Type="CrusadersModel.Store.Games1" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Results">
@@ -79,7 +80,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="PlayersGames">
-    <End Role="Players" Type="CrusadersModel.Store.Players1" Multiplicity="1" />
+    <End Role="Players" Type="CrusadersModel.Store.Players1" Multiplicity="0..1" />
     <End Role="Games" Type="CrusadersModel.Store.Games1" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Players">
@@ -129,9 +130,9 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Price" Nullable="false" />
-          <Property Type="String" Name="Description" Nullable="false" />
-          <Property Type="String" Name="Type" Nullable="false" />
+          <Property Type="String" Name="Price" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Type" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Game" Relationship="CrusadersModel.GameTicket" FromRole="Ticket" ToRole="Game" />
         </EntityType>
         <EntityType Name="GamesResult">
@@ -139,11 +140,11 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Result" Nullable="false" />
-          <Property Type="String" Name="Opponent" Nullable="false" />
-          <Property Type="String" Name="Venue" Nullable="false" />
-          <Property Type="String" Name="Comp" Nullable="false" />
-          <Property Type="String" Name="Data" Nullable="false" />
+          <Property Type="String" Name="Result" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Opponent" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Venue" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Comp" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Data" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Games" Relationship="CrusadersModel.ResultsGames" FromRole="Results" ToRole="Games" />
         </EntityType>
         <EntityType Name="Game">
@@ -151,31 +152,32 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Opponent" Nullable="false" />
-          <Property Type="String" Name="Venue" Nullable="false" />
-          <Property Type="String" Name="Comp" Nullable="false" />
-          <Property Type="String" Name="Data" Nullable="false" />
+          <Property Type="String" Name="Opponent" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Venue" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Comp" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Data" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Result" Relationship="CrusadersModel.ResultsGames" FromRole="Games" ToRole="Results" />
           <NavigationProperty Name="Player" Relationship="CrusadersModel.PlayersGames" FromRole="Games" ToRole="Players" />
           <NavigationProperty Name="Tickets" Relationship="CrusadersModel.GameTicket" FromRole="Game" ToRole="Ticket" />
+          <Property Type="String" Name="Image" Nullable="false" />
         </EntityType>
         <EntityType Name="Player">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Number" Nullable="false" />
-          <Property Type="String" Name="FamilyName" Nullable="false" />
-          <Property Type="String" Name="Name" Nullable="false" />
-          <Property Type="String" Name="Position" Nullable="false" />
+          <Property Type="String" Name="Number" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="FamilyName" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Position" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Games" Relationship="CrusadersModel.PlayersGames" FromRole="Players" ToRole="Games" />
         </EntityType>
         <Association Name="ResultsGames">
-          <End Type="CrusadersModel.GamesResult" Role="Results" Multiplicity="1" />
+          <End Type="CrusadersModel.GamesResult" Role="Results" Multiplicity="0..1" />
           <End Type="CrusadersModel.Game" Role="Games" Multiplicity="*" />
         </Association>
         <Association Name="PlayersGames">
-          <End Type="CrusadersModel.Player" Role="Players" Multiplicity="1" />
+          <End Type="CrusadersModel.Player" Role="Players" Multiplicity="0..1" />
           <End Type="CrusadersModel.Game" Role="Games" Multiplicity="*" />
         </Association>
         <Association Name="GameTicket">
@@ -218,6 +220,7 @@
           <ScalarProperty Name="Venue" ColumnName="Venue" />
           <ScalarProperty Name="Comp" ColumnName="Comp" />
           <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -239,6 +242,7 @@
       <EndProperty Name="Games">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
+      <Condition ColumnName="Result_id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="PlayersGames" TypeName="CrusadersModel.PlayersGames" StoreEntitySet="Games1">
       <EndProperty Name="Players">
@@ -247,6 +251,7 @@
       <EndProperty Name="Games">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
+      <Condition ColumnName="Player_id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="GameTicket" TypeName="CrusadersModel.GameTicket" StoreEntitySet="Tickets">
       <EndProperty Name="Game">

@@ -168,13 +168,10 @@
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
-    <Content Include="Content\themes\base\material-bootstrap\material-fullpalette.css" />
+    <Content Include="Content\themes\base\material-bootstrap\bootstrap-material-datetimepicker.css" />
     <Content Include="Content\themes\base\material-bootstrap\material-fullpalette.min.css" />
-    <Content Include="Content\themes\base\material-bootstrap\material.css" />
     <Content Include="Content\themes\base\material-bootstrap\material.min.css" />
-    <Content Include="Content\themes\base\material-bootstrap\ripples.css" />
     <Content Include="Content\themes\base\material-bootstrap\ripples.min.css" />
-    <Content Include="Content\themes\base\material-bootstrap\roboto.css" />
     <Content Include="Content\themes\base\material-bootstrap\roboto.min.css" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -205,10 +202,12 @@
     <Content Include="Content\themes\base\Site_style.css" />
     <Content Include="Crusaders.edmx.sql" />
     <Content Include="Games\CreateGame.aspx" />
+    <Content Include="Games\ShowGames.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\Crusaders_logo.png" />
     <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\keighley.png" />
     <Content Include="Images\news_1.jpg" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
@@ -223,6 +222,7 @@
     <Content Include="Images\slide_1.jpg" />
     <Content Include="Images\slide_2.jpg" />
     <Content Include="Images\slide_3.jpg" />
+    <Content Include="Images\ticket.jpg" />
     <Content Include="packages.config" />
     <EntityDeploy Include="Crusaders.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -235,6 +235,7 @@
     </Content>
     <Content Include="Crusaders.edmx.diagram">
       <DependentUpon>Crusaders.edmx</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Crusaders.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -242,21 +243,16 @@
       <LastGenOutput>Crusaders.cs</LastGenOutput>
     </Content>
     <Content Include="ClassDiagram1.cd" />
-    <Content Include="Content\themes\base\material-bootstrap\material-fullpalette.css.map" />
-    <Content Include="Content\themes\base\material-bootstrap\material-fullpalette.min.css.map" />
-    <Content Include="Content\themes\base\material-bootstrap\material.css.map" />
-    <Content Include="Content\themes\base\material-bootstrap\material.min.css.map" />
-    <Content Include="Content\themes\base\material-bootstrap\ripples.css.map" />
-    <Content Include="Content\themes\base\material-bootstrap\ripples.min.css.map" />
-    <Content Include="Content\themes\base\material-bootstrap\roboto.css.map" />
-    <Content Include="Content\themes\base\material-bootstrap\roboto.min.css.map" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.11.3.js" />
+    <Content Include="Scripts\material-bootstrap\bootstrap-material-datetimepicker.js" />
     <Content Include="Scripts\material-bootstrap\material.js" />
     <Content Include="Scripts\material-bootstrap\material.min.js" />
+    <Content Include="Scripts\material-bootstrap\moment.js" />
     <Content Include="Scripts\material-bootstrap\ripples.js" />
     <Content Include="Scripts\material-bootstrap\ripples.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\Site.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -376,6 +372,13 @@
     <Compile Include="Games\CreateGame.aspx.designer.cs">
       <DependentUpon>CreateGame.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Games\ShowGames.aspx.cs">
+      <DependentUpon>ShowGames.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\ShowGames.aspx.designer.cs">
+      <DependentUpon>ShowGames.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -410,6 +413,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GamesResult\" />
+    <Folder Include="Games\Data\" />
     <Folder Include="Players\" />
   </ItemGroup>
   <ItemGroup>
@@ -430,6 +434,7 @@
     <Content Include="Content\fonts\RobotoDraftMedium.woff2" />
     <Content Include="Content\fonts\RobotoDraftRegular.woff" />
     <Content Include="Content\fonts\RobotoDraftRegular.woff2" />
+    <Content Include="Content\fonts\Material-Design-Icons.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

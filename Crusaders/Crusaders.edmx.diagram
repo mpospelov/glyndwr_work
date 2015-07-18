@@ -5,10 +5,10 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="b7495a072c5c446cbf350f3f371d3765" Name="Diagram1" >
-        <EntityTypeShape EntityType="CrusadersModel.Ticket" Width="1.5" PointX="1.125" PointY="3.25" />
-        <EntityTypeShape EntityType="CrusadersModel.GamesResult" Width="1.5" PointX="3.875" PointY="0.875" />
-        <EntityTypeShape EntityType="CrusadersModel.Game" Width="1.5" PointX="6.375" PointY="2.75" />
-        <EntityTypeShape EntityType="CrusadersModel.Player" Width="1.5" PointX="8.875" PointY="0.75" />
+        <EntityTypeShape EntityType="CrusadersModel.Ticket" Width="1.5" PointX="5.25" PointY="1.25" />
+        <EntityTypeShape EntityType="CrusadersModel.GamesResult" Width="1.5" PointX="0.75" PointY="5" />
+        <EntityTypeShape EntityType="CrusadersModel.Game" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="CrusadersModel.Player" Width="1.5" PointX="0.75" PointY="1.125" />
         <AssociationConnector Association="CrusadersModel.ResultsGames" />
         <AssociationConnector Association="CrusadersModel.PlayersGames" />
         <AssociationConnector Association="CrusadersModel.GameTicket" />

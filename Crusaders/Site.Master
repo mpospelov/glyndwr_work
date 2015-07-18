@@ -10,6 +10,7 @@
     <link href="/Content/themes/base/material-bootstrap/material-fullpalette.min.css" rel="stylesheet" type="text/css" />
     <link href="/Content/themes/base/material-bootstrap/ripples.min.css" rel="stylesheet" type="text/css" />
     <link href="/Content/themes/base/material-bootstrap/roboto.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/themes/base/material-bootstrap/bootstrap-material-datetimepicker.css" rel="stylesheet"  type="text/css"/>
     <link href="/Content/themes/base/Site_style.css" rel="stylesheet" type="text/css"/>
     <link href="/Content/themes/base/carousel.css" rel="stylesheet" type="text/css"/>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -95,6 +96,9 @@
         <script src="/Scripts/bootstrap.min.js"></script>
         <script src="/Scripts/material-bootstrap/ripples.js"></script>
         <script src="/Scripts/material-bootstrap/material.js"></script>
+        <script src="/Scripts/material-bootstrap/moment.js"></script>
+        <script src="/Scripts/material-bootstrap/bootstrap-material-datetimepicker.js"></script>
+        <script src="/Scripts/Site.js"></script>
     </div>
 </body>
 </html>

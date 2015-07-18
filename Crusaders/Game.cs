@@ -18,12 +18,13 @@ namespace Crusaders
         {
             this.Tickets = new HashSet<Ticket>();
         }
-    
+
         public int id { get; set; }
         public string Opponent { get; set; }
         public string Venue { get; set; }
         public string Comp { get; set; }
         public string Data { get; set; }
+        public string Image { get; set; }
     
         public virtual GamesResult Result { get; set; }
         public virtual Player Player { get; set; }
