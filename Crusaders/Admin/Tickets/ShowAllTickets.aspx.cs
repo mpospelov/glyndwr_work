@@ -11,6 +11,7 @@ namespace Crusaders.Admin.Tickets
     {
         protected void TicketsRepeater_Load(object sender, EventArgs e)
         {
+
             CrusadersEntities db = new CrusadersEntities();
             TicketsRepeater.DataSource = db.Tickets.ToList();
             TicketsRepeater.DataBind();

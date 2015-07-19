@@ -132,10 +132,6 @@
     <Content Include="Admin\Account\Register.aspx" />
     <Content Include="Admin\Account\RegisterExternalLogin.aspx" />
     <Content Include="Admin\Games\Show.aspx" />
-    <Content Include="App_Data\Crusaders.mdf" />
-    <Content Include="App_Data\Crusaders_log.ldf">
-      <DependentUpon>Crusaders.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\fonts\LICENSE.txt" />
     <Content Include="Content\fonts\Material-Design-Icons.svg" />
     <Content Include="Content\Site.css" />
@@ -242,7 +238,6 @@
       <DependentUpon>Crusaders.edmx</DependentUpon>
       <LastGenOutput>Crusaders.cs</LastGenOutput>
     </Content>
-    <Content Include="ClassDiagram1.cd" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.11.3.js" />
     <Content Include="Scripts\material-bootstrap\bootstrap-material-datetimepicker.js" />
@@ -407,6 +402,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Data\Games\" />
     <Folder Include="GamesResult\" />
     <Folder Include="Players\" />
