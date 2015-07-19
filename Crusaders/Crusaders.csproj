@@ -218,6 +218,7 @@
     <Content Include="Images\slide_1.jpg" />
     <Content Include="Images\slide_2.jpg" />
     <Content Include="Images\slide_3.jpg" />
+    <Content Include="Images\slide_ticket.jpg" />
     <Content Include="Images\ticket.jpg" />
     <Content Include="packages.config" />
     <EntityDeploy Include="Crusaders.edmx">
@@ -277,6 +278,7 @@
     <Content Include="Global.asax" />
     <Content Include="Admin\Tickets\CreateTicket.aspx" />
     <Content Include="Admin\Tickets\ShowAllTickets.aspx" />
+    <Content Include="Site\Tickets\ShowAllTickets.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -382,6 +384,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site\Tickets\ShowAllTickets.aspx.cs">
+      <DependentUpon>ShowAllTickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\Tickets\ShowAllTickets.aspx.designer.cs">
+      <DependentUpon>ShowAllTickets.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ticket.cs">
       <DependentUpon>Crusaders.tt</DependentUpon>

@@ -30,3 +30,16 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
+
+.tickets {
+    width: 100%;
+}
+
+.tickets-info-box {
+    margin-top: 15px;
+    margin-right: 0px;
+}
+
+.ticket-box {
+    padding-left: 0px;
+}
