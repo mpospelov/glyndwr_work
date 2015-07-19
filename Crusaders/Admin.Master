@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Crusaders.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="Crusaders.AdminMaster" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="navbar navbar-material-green-400">
+        <div class="navbar navbar-material-red-400">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                     <span class="icon-bar"></span>
@@ -28,7 +28,7 @@
                 </button>
               
                 <a class="navbar-brand" href="/" style="margin-top: -14px">
-                    <img src="\Images\Crusaders_logo.png" alt="HTML tutorial" style="width: 62px">
+                    <img src="/Images/Crusaders_logo.png" alt="HTML tutorial" style="width: 62px">
                 </a>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
@@ -41,21 +41,23 @@
                             <li><a href="javascript:void(0)">Statistic</a></li>
                         </ul>
                     </li>   
-                    <li><a href="/Tickets/ShowAllTickets.aspx">Tickets</a></li>
-                     
-
                     <li class="dropdown">
-                        <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Games<b class="caret"></b></a>
+                         <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Tickets<b class="caret"></b></a>
+                         <ul class="dropdown-menu">
+                            <li><a href="/Admin/Tickets/ShowAllTickets.aspx">Show all</a></li>
+                            <li><a href="/Admin/Tickets/CreateTicket.aspx">Create</a></li>
+                         </ul>
+                    </li>
+                     
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Games<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="javascript:void(0)">Results</a></li>
-                            <li><a href="javascript:void(0)">Future</a></li>
-                            <li><a href="javascript:void(0)">Something else here</a></li>
-                        </ul>
+                            <li><a href="/Admin/Games/ShowAllTickets.aspx">Show all</a></li>
+                            <li><a href="/Admin/Games/CreateGame.aspx">Create</a></li>
+                         </ul>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-left">
-                    <input type="text" class="form-control col-lg-8" placeholder="Search">
-                </form>
+                
             </div>
         </div>
       

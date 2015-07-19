@@ -124,17 +124,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Account\Login.aspx" />
-    <Content Include="Account\Manage.aspx" />
-    <Content Include="Account\OpenAuthProviders.ascx" />
-    <Content Include="Account\Register.aspx" />
-    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Admin\Account\Login.aspx">
+      <BrowseToURL>~/Admin.aspx</BrowseToURL>
+    </Content>
+    <Content Include="Admin\Account\Manage.aspx" />
+    <Content Include="Admin\Account\OpenAuthProviders.ascx" />
+    <Content Include="Admin\Account\Register.aspx" />
+    <Content Include="Admin\Account\RegisterExternalLogin.aspx" />
+    <Content Include="Admin\Games\Show.aspx" />
     <Content Include="App_Data\Crusaders.mdf" />
     <Content Include="App_Data\Crusaders_log.ldf">
       <DependentUpon>Crusaders.mdf</DependentUpon>
     </Content>
-    <Content Include="Contact.aspx" />
     <Content Include="Content\fonts\LICENSE.txt" />
     <Content Include="Content\fonts\Material-Design-Icons.svg" />
     <Content Include="Content\Site.css" />
@@ -201,8 +202,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\Site_style.css" />
     <Content Include="Crusaders.edmx.sql" />
-    <Content Include="Games\CreateGame.aspx" />
-    <Content Include="Games\ShowGames.aspx" />
+    <Content Include="Admin\Games\CreateGame.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\Crusaders_logo.png" />
@@ -275,67 +275,69 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Default.aspx" />
+    <Content Include="Site\Default.aspx">
+      <BrowseToURL>~/</BrowseToURL>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Tickets\CreateTicket.aspx" />
-    <Content Include="Tickets\ShowAllTickets.aspx" />
+    <Content Include="Admin\Tickets\CreateTicket.aspx" />
+    <Content Include="Admin\Tickets\ShowAllTickets.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Games\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Games\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Login.aspx.cs">
+    <Compile Include="Admin\Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\Login.aspx.designer.cs">
+    <Compile Include="Admin\Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\Manage.aspx.cs">
+    <Compile Include="Admin\Account\Manage.aspx.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\Manage.aspx.designer.cs">
+    <Compile Include="Admin\Account\Manage.aspx.designer.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+    <Compile Include="Admin\Account\OpenAuthProviders.ascx.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+    <Compile Include="Admin\Account\OpenAuthProviders.ascx.designer.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Account\Register.aspx.cs">
+    <Compile Include="Admin\Account\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\Register.aspx.designer.cs">
+    <Compile Include="Admin\Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+    <Compile Include="Admin\Account\RegisterExternalLogin.aspx.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+    <Compile Include="Admin\Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Crusaders.Context.cs">
       <AutoGen>True</AutoGen>
@@ -352,11 +354,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Crusaders.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
+    <Compile Include="Site\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
+    <Compile Include="Site\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Game.cs">
@@ -365,19 +367,12 @@
     <Compile Include="GamesResult.cs">
       <DependentUpon>Crusaders.tt</DependentUpon>
     </Compile>
-    <Compile Include="Games\CreateGame.aspx.cs">
+    <Compile Include="Admin\Games\CreateGame.aspx.cs">
       <DependentUpon>CreateGame.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Games\CreateGame.aspx.designer.cs">
+    <Compile Include="Admin\Games\CreateGame.aspx.designer.cs">
       <DependentUpon>CreateGame.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Games\ShowGames.aspx.cs">
-      <DependentUpon>ShowGames.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Games\ShowGames.aspx.designer.cs">
-      <DependentUpon>ShowGames.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -396,28 +391,28 @@
     <Compile Include="Ticket.cs">
       <DependentUpon>Crusaders.tt</DependentUpon>
     </Compile>
-    <Compile Include="Tickets\CreateTicket.aspx.cs">
+    <Compile Include="Admin\Tickets\CreateTicket.aspx.cs">
       <DependentUpon>CreateTicket.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Tickets\CreateTicket.aspx.designer.cs">
+    <Compile Include="Admin\Tickets\CreateTicket.aspx.designer.cs">
       <DependentUpon>CreateTicket.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Tickets\ShowAllTickets.aspx.cs">
+    <Compile Include="Admin\Tickets\ShowAllTickets.aspx.cs">
       <DependentUpon>ShowAllTickets.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Tickets\ShowAllTickets.aspx.designer.cs">
+    <Compile Include="Admin\Tickets\ShowAllTickets.aspx.designer.cs">
       <DependentUpon>ShowAllTickets.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Data\Games\" />
     <Folder Include="GamesResult\" />
-    <Folder Include="Games\Data\" />
     <Folder Include="Players\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Account\Web.config" />
+    <Content Include="Admin\Account\Web.config" />
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
@@ -435,6 +430,7 @@
     <Content Include="Content\fonts\RobotoDraftRegular.woff" />
     <Content Include="Content\fonts\RobotoDraftRegular.woff2" />
     <Content Include="Content\fonts\Material-Design-Icons.woff2" />
+    <Content Include="Admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -458,7 +454,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>1706</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:2610/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

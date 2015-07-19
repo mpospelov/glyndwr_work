@@ -18,7 +18,7 @@ namespace Crusaders
         {
             this.Tickets = new HashSet<Ticket>();
         }
-
+    
         public int id { get; set; }
         public string Opponent { get; set; }
         public string Venue { get; set; }
