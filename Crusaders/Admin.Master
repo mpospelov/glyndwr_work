@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                 </button>
               
-                <a class="navbar-brand" href="/" style="margin-top: -14px">
+                <a class="navbar-brand" href="/Site/Default.aspx" style="margin-top: -14px">
                     <img src="/Images/Crusaders_logo.png" alt="HTML tutorial" style="width: 62px">
                 </a>
             </div>
@@ -52,8 +52,16 @@
                     <li class="dropdown">
                         <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Games<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/Admin/Games/ShowAllTickets.aspx">Show all</a></li>
+                            <li><a href="/Admin/Games/Show.aspx">Show all</a></li>
                             <li><a href="/Admin/Games/CreateGame.aspx">Create</a></li>
+                         </ul>
+                    </li>
+
+                    <li class="dropdown">
+                         <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Results<b class="caret"></b></a>
+                         <ul class="dropdown-menu">
+                            <li><a href="/Admin/Games/ShowAllResults.aspx">Show all</a></li>
+                            <li><a href="/Admin/Games/CreateResults.aspx">Create</a></li>
                          </ul>
                     </li>
                 </ul>

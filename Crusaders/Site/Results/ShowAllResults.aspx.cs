@@ -5,16 +5,17 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Crusaders.Admin.Games
+namespace Crusaders.Site.Results
 {
-    public partial class Show : System.Web.UI.Page
+    public partial class ShowAllResults : System.Web.UI.Page
     {
-      
+
         protected void GamesRepeater_Load(object sender, EventArgs e)
         {
             CrusadersEntities db = new CrusadersEntities();
-            GamesRepeater.DataSource = db.Games1.ToList();
-            GamesRepeater.DataBind();  
+            ResultsRepeater.DataSource = db.GamesResults.ToList();
+            ResultsRepeater.DataBind();  
+ 
         }
     }
 }

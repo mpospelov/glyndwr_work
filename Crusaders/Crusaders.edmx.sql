@@ -2,13 +2,11 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 07/19/2015 16:05:58
--- Generated from EDMX file: C:\temp\glyndwr_work\Crusaders\Crusaders.edmx
+-- Date Created: 07/19/2015 19:37:34
+-- Generated from EDMX file: C:\Crusaders\Crusaders\Crusaders\Crusaders.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
-GO
-USE [dbd603dc7b8666429fb327a4da00226583];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -61,11 +59,12 @@ GO
 -- Creating table 'GamesResults'
 CREATE TABLE [dbo].[GamesResults] (
     [id] int IDENTITY(1,1) NOT NULL,
-    [Result] nvarchar(max)  NOT NULL,
+    [Result] bit  NOT NULL,
     [Opponent] nvarchar(max)  NOT NULL,
     [Venue] nvarchar(max)  NOT NULL,
     [Comp] nvarchar(max)  NOT NULL,
-    [Data] nvarchar(max)  NOT NULL
+    [Data] nvarchar(max)  NOT NULL,
+    [Points] nvarchar(max)  NOT NULL
 );
 GO
 

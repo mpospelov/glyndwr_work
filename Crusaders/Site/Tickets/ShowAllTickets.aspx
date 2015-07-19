@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ShowAllTickets.aspx.cs" Inherits="Crusaders.Site.Tickets.ShowAllTickets" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <h2>Tickets</h2>
     <div id="body">
         <img class="tickets" src="/Images/slide_ticket.jpg" />
         <div class="container marketing">

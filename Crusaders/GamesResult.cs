@@ -20,11 +20,12 @@ namespace Crusaders
         }
     
         public int id { get; set; }
-        public string Result { get; set; }
+        public bool Result { get; set; }
         public string Opponent { get; set; }
         public string Venue { get; set; }
         public string Comp { get; set; }
         public string Data { get; set; }
+        public string Points { get; set; }
     
         public virtual ICollection<Game> Games { get; set; }
     }

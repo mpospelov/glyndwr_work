@@ -38,11 +38,12 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Result" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Result" Type="bit" Nullable="false" />
     <Property Name="Opponent" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Venue" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Comp" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Data" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Points" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="Games1">
     <Key>
@@ -140,12 +141,13 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Result" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="Boolean" Name="Result" Nullable="false" />
           <Property Type="String" Name="Opponent" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Type="String" Name="Venue" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Type="String" Name="Comp" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Type="String" Name="Data" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Games" Relationship="CrusadersModel.ResultsGames" FromRole="Results" ToRole="Games" />
+          <Property Type="String" Name="Points" Nullable="false" />
         </EntityType>
         <EntityType Name="Game">
           <Key>
@@ -209,6 +211,7 @@
           <ScalarProperty Name="Venue" ColumnName="Venue" />
           <ScalarProperty Name="Comp" ColumnName="Comp" />
           <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

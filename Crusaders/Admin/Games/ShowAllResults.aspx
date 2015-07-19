@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Show.aspx.cs" Inherits="Crusaders.Admin.Games.Show" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="ShowAllResults.aspx.cs" Inherits="Crusaders.Admin.Games.ShowAllResults" %>
+
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <div class="row featurette">
         <div class="col-md-7">
@@ -12,7 +13,7 @@
     <h3 class="ticket-title">First featurette heading.</h3>
     <form id="Form1" runat="server">
         <div class="table-responsive">
-            <asp:Repeater ID="GamesRepeater" runat="server" OnLoad="GamesRepeater_Load">
+            <asp:Repeater ID="ResultsRepeater" runat="server" OnLoad="ResultsRepeater_Load">
                 <HeaderTemplate>
                     <table class="table table-striped">
                         <header>
@@ -26,10 +27,12 @@
                 </HeaderTemplate>
                 <ItemTemplate>
                     <tr>
+                        <td><%# Eval("Data") %></td>
+                        <td><%# Eval("Points") %></td>
+                        <td><%# Eval("Result") %></td>
                         <td><%# Eval("Opponent") %></td>
                         <td><%# Eval("Venue") %></td>
                         <td><%# Eval("Comp") %></td>
-                        <td><%# Eval("Data") %></td>
                     </tr>
                 </ItemTemplate>
                 <FooterTemplate>

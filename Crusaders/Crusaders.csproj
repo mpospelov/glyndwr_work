@@ -131,7 +131,9 @@
     <Content Include="Admin\Account\OpenAuthProviders.ascx" />
     <Content Include="Admin\Account\Register.aspx" />
     <Content Include="Admin\Account\RegisterExternalLogin.aspx" />
+    <Content Include="Admin\Games\CreateResults.aspx" />
     <Content Include="Admin\Games\Show.aspx" />
+    <Content Include="Admin\Games\ShowAllResults.aspx" />
     <Content Include="Content\fonts\LICENSE.txt" />
     <Content Include="Content\fonts\Material-Design-Icons.svg" />
     <Content Include="Content\Site.css" />
@@ -204,6 +206,7 @@
     <Content Include="Images\Crusaders_logo.png" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\keighley.png" />
+    <Content Include="Images\lose.png" />
     <Content Include="Images\news_1.jpg" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
@@ -215,11 +218,14 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\result.jpg" />
+    <Content Include="Images\result_site.jpg" />
     <Content Include="Images\slide_1.jpg" />
     <Content Include="Images\slide_2.jpg" />
     <Content Include="Images\slide_3.jpg" />
     <Content Include="Images\slide_ticket.jpg" />
     <Content Include="Images\ticket.jpg" />
+    <Content Include="Images\win.png" />
     <Content Include="packages.config" />
     <EntityDeploy Include="Crusaders.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -278,6 +284,7 @@
     <Content Include="Global.asax" />
     <Content Include="Admin\Tickets\CreateTicket.aspx" />
     <Content Include="Admin\Tickets\ShowAllTickets.aspx" />
+    <Content Include="Site\Results\ShowAllResults.aspx" />
     <Content Include="Site\Tickets\ShowAllTickets.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -292,12 +299,26 @@
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Games\CreateResults.aspx.cs">
+      <DependentUpon>CreateResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Games\CreateResults.aspx.designer.cs">
+      <DependentUpon>CreateResults.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Games\Show.aspx.cs">
       <DependentUpon>Show.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Games\Show.aspx.designer.cs">
       <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Games\ShowAllResults.aspx.cs">
+      <DependentUpon>ShowAllResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Games\ShowAllResults.aspx.designer.cs">
+      <DependentUpon>ShowAllResults.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
@@ -385,6 +406,13 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Site\Results\ShowAllResults.aspx.cs">
+      <DependentUpon>ShowAllResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\Results\ShowAllResults.aspx.designer.cs">
+      <DependentUpon>ShowAllResults.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site\Tickets\ShowAllTickets.aspx.cs">
       <DependentUpon>ShowAllTickets.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -415,6 +443,7 @@
     <Folder Include="Data\Games\" />
     <Folder Include="GamesResult\" />
     <Folder Include="Players\" />
+    <Folder Include="Site\Club\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Account\Web.config" />

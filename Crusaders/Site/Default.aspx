@@ -10,7 +10,7 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item">
-                <img class="first-slide" src="Images/slide_1.jpg"" alt="First slide">
+                <img class="first-slide" src="/Images/slide_1.jpg"" alt="First slide">
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Example headline.</h1>
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="second-slide" src="Images/slide_2.jpg"" alt="Second slide">
+                <img class="second-slide" src="/Images/slide_2.jpg"" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Another example headline.</h1>
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="item active">
-                <img class="third-slide" src="Images/slide_3.jpg"" alt="Third slide">
+                <img class="third-slide" src="/Images/slide_3.jpg"" alt="Third slide">
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>One more for good measure.</h1>
@@ -68,7 +68,7 @@
     <hr class="featurette-divider">
     <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <h2>First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">

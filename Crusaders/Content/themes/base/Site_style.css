@@ -6,10 +6,6 @@
    border-top: 1px solid #66bb6a;
 }
 
-.featurette-image.img-responsive.center-block {
-    height: 250px;
-}
-
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -42,4 +38,8 @@
 
 .ticket-box {
     padding-left: 0px;
+}
+
+.checkbox-result {
+    padding-top: 0px;
 }

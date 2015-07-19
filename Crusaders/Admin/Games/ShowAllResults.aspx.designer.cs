@@ -10,7 +10,7 @@
 namespace Crusaders.Admin.Games {
     
     
-    public partial class Show {
+    public partial class ShowAllResults {
         
         /// <summary>
         /// Form1 control.
@@ -22,12 +22,12 @@ namespace Crusaders.Admin.Games {
         protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
         
         /// <summary>
-        /// GamesRepeater control.
+        /// ResultsRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater GamesRepeater;
+        protected global::System.Web.UI.WebControls.Repeater ResultsRepeater;
     }
 }

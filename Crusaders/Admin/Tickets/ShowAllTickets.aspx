@@ -9,6 +9,7 @@
         <div class="col-md-5">
           <img class="featurette-image img-responsive center-block" src="/Images/ticket.jpg" /" alt="Generic placeholder image">
         </div>
+
     </div>
     <h3 class="ticket-title">First featurette heading.</h3>
     <form runat="server">
