@@ -31,6 +31,7 @@
     <Property Name="Price" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AgeOrType" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Game_id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="GamesResults">
@@ -67,6 +68,7 @@
     <Property Name="FamilyName" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Position" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Avatar" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <Association Name="ResultsGames">
     <End Role="Results" Type="CrusadersModel.Store.GamesResults" Multiplicity="0..1" />
@@ -135,6 +137,7 @@
           <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Type="String" Name="Type" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Game" Relationship="CrusadersModel.GameTicket" FromRole="Ticket" ToRole="Game" />
+          <Property Type="String" Name="AgeOrType" Nullable="false" />
         </EntityType>
         <EntityType Name="GamesResult">
           <Key>
@@ -173,6 +176,7 @@
           <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Type="String" Name="Position" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Games" Relationship="CrusadersModel.PlayersGames" FromRole="Players" ToRole="Games" />
+          <Property Type="String" Name="Avatar" Nullable="false" />
         </EntityType>
         <Association Name="ResultsGames">
           <End Type="CrusadersModel.GamesResult" Role="Results" Multiplicity="0..1" />
@@ -199,6 +203,7 @@
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="AgeOrType" ColumnName="AgeOrType" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -235,6 +240,7 @@
           <ScalarProperty Name="FamilyName" ColumnName="FamilyName" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

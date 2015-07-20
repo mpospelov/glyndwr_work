@@ -5,8 +5,23 @@
         <div class="form-group">
             <asp:Label ID="TypeLbl" runat="server" Text="Type" CssClass="col-lg-2 control-label"></asp:Label>
             <div class="col-lg-10">
-                <asp:TextBox ID="TxtType" runat="server" CssClass="form-control"></asp:TextBox>
+                  <select class="form-control" ID="TypeSlc" runat="server">
+                                                <option>Matchday</option>
+                                                <option>Season</option>
+                                               
+                  </select>
             </div>
+            <asp:Label ID="AgeLbl" runat="server" Text="Type" CssClass="col-lg-2 control-label"></asp:Label>
+            <div class="col-lg-10">
+                  <select class="form-control" ID="AgeSlc" runat="server">
+                                                <option>Child</option>
+                                                <option>Adult</option>
+                                                <option>Concession</option>
+                                                <option>Family</option>
+                                               
+                  </select>
+            </div>
+          
 
             <asp:Label ID="PriceLbl" runat="server" Text="Price" CssClass="col-lg-2 control-label"></asp:Label>
             <div class="col-lg-10">

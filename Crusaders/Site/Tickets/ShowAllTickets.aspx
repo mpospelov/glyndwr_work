@@ -11,6 +11,7 @@
                         <div class="col-lg-4 ticket-box">
                             <div class="well infobox">
                                 <h2><%# Eval("Type") %></h2>
+                                <p><%# Eval("AgeOrType") %></p>
                                 <p><%# Eval("Price") %></p>
                                 <p><%# Eval("Description") %></p>
                             </div>

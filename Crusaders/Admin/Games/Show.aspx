@@ -17,19 +17,26 @@
                     <table class="table table-striped">
                         <header>
                             <th>Date</th>
-                            <th>Points</th>
-                            <th>Win</th>
                             <th>Oponent</th>
                             <th>Venue</th>
                             <th>Comp</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </header>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <tr>
+                        <td><%# Eval("Data") %></td>
                         <td><%# Eval("Opponent") %></td>
                         <td><%# Eval("Venue") %></td>
                         <td><%# Eval("Comp") %></td>
-                        <td><%# Eval("Data") %></td>
+                        <td>
+                            <a href="/"><i class="mdi-editor-border-color"></i></a>
+
+                        </td>
+                        <td>
+                            <a href="/"><i class="mdi-navigation-close"></i></a>
+                        </td>
                     </tr>
                 </ItemTemplate>
                 <FooterTemplate>

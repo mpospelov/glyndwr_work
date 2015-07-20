@@ -5,12 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Crusaders.Admin.Games
+namespace Crusaders.Admin.Players
 {
-    public partial class CreateGame : System.Web.UI.Page
+    public partial class CreatePlayer : System.Web.UI.Page
     {
-        protected System.Web.UI.HtmlControls.HtmlInputButton Submit1;
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -23,21 +21,20 @@ namespace Crusaders.Admin.Games
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
-            Crusaders.Game gm = new Crusaders.Game();
-            gm.Data = TxtData.Text;
-            gm.Opponent = TxtOpnt.Text;
-            gm.Venue = TxtVenue.Text;
-            gm.Comp = TxtComp.Text;
-
+            Crusaders.Player pl = new Crusaders.Player();
+            pl.FamilyName = TxtFName.Text;
+            pl.Name = TxtName.Text;
+            pl.Number = TxtNmb.Text;
+            pl.Position = TxtPst.Text;
             if ((File1.PostedFile != null) && (File1.PostedFile.ContentLength > 0))
             {
                 string fn = System.IO.Path.GetFileName(File1.PostedFile.FileName);
-                string SaveLocation = Server.MapPath("/Admin/Games/Data/")+ fn;
+                string SaveLocation = Server.MapPath("/Admin/Players/Data/") + fn;
                 try
                 {
                     File1.PostedFile.SaveAs(SaveLocation);
                     Response.Write("The file has been uploaded.");
-                    gm.Image = fn;
+                    pl.Avatar = fn;
                 }
                 catch (Exception ex)
                 {
@@ -52,9 +49,9 @@ namespace Crusaders.Admin.Games
             {
                 Response.Write("Please select a file to upload.");
             }
-            
+
             CrusadersEntities db = new CrusadersEntities();
-            db.Games1.Add(gm);
+            db.Players1.Add(pl);
             db.SaveChanges();
         }
     }

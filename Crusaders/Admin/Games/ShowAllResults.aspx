@@ -23,6 +23,8 @@
                             <th>Oponent</th>
                             <th>Venue</th>
                             <th>Comp</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </header>
                 </HeaderTemplate>
                 <ItemTemplate>
@@ -33,6 +35,13 @@
                         <td><%# Eval("Opponent") %></td>
                         <td><%# Eval("Venue") %></td>
                         <td><%# Eval("Comp") %></td>
+                         <td>
+                            <a href="/"><i class="mdi-editor-border-color"></i></a>
+
+                        </td>
+                        <td>
+                            <a href="/"><i class="mdi-navigation-close"></i></a>
+                        </td>
                     </tr>
                 </ItemTemplate>
                 <FooterTemplate>
