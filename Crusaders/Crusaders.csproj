@@ -131,6 +131,9 @@
     <Content Include="Admin\Account\OpenAuthProviders.ascx" />
     <Content Include="Admin\Account\Register.aspx" />
     <Content Include="Admin\Account\RegisterExternalLogin.aspx" />
+    <Content Include="Admin\Default.aspx">
+      <BrowseToURL>~/</BrowseToURL>
+    </Content>
     <Content Include="Admin\Games\CreateResults.aspx" />
     <Content Include="Admin\Games\Show.aspx" />
     <Content Include="Admin\Games\ShowAllResults.aspx" />
@@ -277,8 +280,8 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Site\Default.aspx">
-      <BrowseToURL>~/</BrowseToURL>
+    <Content Include="Default.aspx">
+      <BrowseToURL>/</BrowseToURL>
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -298,6 +301,13 @@
     </Compile>
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Games\CreateResults.aspx.cs">
       <DependentUpon>CreateResults.aspx</DependentUpon>
@@ -372,11 +382,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Crusaders.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Site\Default.aspx.cs">
+    <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site\Default.aspx.designer.cs">
+    <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Game.cs">
@@ -486,9 +496,9 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1706</DevelopmentServerPort>
+          <DevelopmentServerPort>3000</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:2610/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Crusaders.Site {
+namespace Crusaders {
     
     
     public partial class Default {
