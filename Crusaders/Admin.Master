@@ -90,7 +90,7 @@
         <div id="body">
             <section class="content-wrapper main-content clear-fix">
                 <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-            </section>
+            </section> 
         </div>
         <hr class="featurette-divider">
         <footer>

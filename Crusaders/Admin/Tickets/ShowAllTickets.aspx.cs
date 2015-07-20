@@ -9,13 +9,12 @@ namespace Crusaders.Admin.Tickets
 {
     public partial class ShowAll : System.Web.UI.Page
     {
+
         protected void TicketsRepeater_Load(object sender, EventArgs e)
         {
-
-            CrusadersEntities db = new CrusadersEntities();
+            CrusadersService.CrusadersEntities db = new CrusadersService.CrusadersEntities(Global.SvcUri);
             TicketsRepeater.DataSource = db.Tickets.ToList();
-            TicketsRepeater.DataBind();
-            
+            TicketsRepeater.DataBind();      
         }
 
     }
