@@ -11,41 +11,36 @@
         </div>
 
     </div>
+    <a href="CreateTicket.aspx"  class="btn btn-primary btn-fab btn-raised mdi-content-add"></a>    
     <h3 class="ticket-title">First featurette heading.</h3>
     <form runat="server">
         <div class="table-responsive">
-            <asp:Repeater ID="TicketsRepeater" runat="server" OnLoad="TicketsRepeater_Load">
-                <HeaderTemplate>
-                    <table class="table table-striped">
-                        <header>
-                            <th>Type</th>
-                            <th></th>
-                            <th>Price</th>
-                            <th>Description</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-                        </header>
-                </HeaderTemplate>
-                <ItemTemplate>
-                    <tr>
-                        <td><%# Eval("Type") %></td>
-                        <td><%# Eval("AgeOrType") %></td>
-                        <td><%# Eval("Price") %></td>
-                        <td><%# Eval("Description") %></td>
-                        <td>
-                            <a href="/"><i class="mdi-editor-border-color"></i></a>
-
-                        </td>
-                        <td>
-                            <a href="/"><i class="mdi-navigation-close"></i></a>
-                        </td>
-                    </tr>
-                </ItemTemplate>
-                <FooterTemplate>
-                    </table>
-                </FooterTemplate>
-            </asp:Repeater>
-
+             <table class="table table-striped">
+                <header>
+                    <th>Type</th>
+                    <th></th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </header>
+                <asp:Repeater ID="TicketsRepeater" runat="server" OnLoad="TicketsRepeater_Load">
+                    <ItemTemplate>
+                        <tr>
+                            <td><%# Eval("Type") %></td>
+                            <td><%# Eval("AgeOrType") %></td>
+                            <td><%# Eval("Price") %></td>
+                            <td><%# Eval("Description") %></td>
+                            <td>
+                                <a href="Edit.aspx?id=<%# Eval("id") %>"><i class="mdi-editor-border-color"></i></a>
+                            </td>
+                            <td>
+                                <a href="Delete.aspx?id=<%# Eval("id") %>"><i class="mdi-navigation-close"></i></a>
+                            </td>
+                        </tr>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </table>
         </div>
     </form>
 </asp:Content>

@@ -12,10 +12,10 @@ namespace Crusaders.Admin.Tickets
 
         protected void TicketsRepeater_Load(object sender, EventArgs e)
         {
-            CrusadersService.CrusadersEntities db = new CrusadersService.CrusadersEntities(Global.SvcUri);
-            TicketsRepeater.DataSource = db.Tickets.ToList();
+            TicketsRepeater.DataSource = Global.CrusadersEntitiesDB.Tickets.ToList();
             TicketsRepeater.DataBind();      
         }
+
 
     }
 }

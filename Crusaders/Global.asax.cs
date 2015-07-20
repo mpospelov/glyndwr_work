@@ -11,7 +11,9 @@ namespace Crusaders
 {
     public class Global : HttpApplication
     {
-        public static Uri SvcUri;
+        public static Uri SvcUri = new Uri("http://glyndwrcrusadersservice.apphb.com/CrusadersService.svc/");
+        public static CrusadersService.CrusadersEntities CrusadersEntitiesDB = new CrusadersService.CrusadersEntities(SvcUri);
+
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup

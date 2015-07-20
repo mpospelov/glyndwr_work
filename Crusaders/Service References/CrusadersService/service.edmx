@@ -1,0 +1,106 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="CrusadersModel" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="Game">
+        <Key>
+          <PropertyRef Name="id" />
+        </Key>
+        <Property Name="id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Opponent" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Venue" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Comp" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Data" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Image" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Result_id" Type="Edm.Int32" />
+        <Property Name="Player_id" Type="Edm.Int32" />
+        <NavigationProperty Name="Tickets" Relationship="CrusadersModel.FK_GameTicket" ToRole="Tickets" FromRole="Game" />
+        <NavigationProperty Name="GamesResult" Relationship="CrusadersModel.FK_ResultsGames" ToRole="GamesResults" FromRole="Game" />
+        <NavigationProperty Name="Players" Relationship="CrusadersModel.PlayerGame" ToRole="Player" FromRole="Game" />
+      </EntityType>
+      <EntityType Name="GameResult">
+        <Key>
+          <PropertyRef Name="id" />
+        </Key>
+        <Property Name="id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Result" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="Opponent" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Venue" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Comp" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Data" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Points" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <NavigationProperty Name="Game" Relationship="CrusadersModel.FK_ResultsGames" ToRole="Game" FromRole="GamesResults" />
+      </EntityType>
+      <EntityType Name="Player">
+        <Key>
+          <PropertyRef Name="id" />
+        </Key>
+        <Property Name="id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Number" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="FamilyName" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Position" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <NavigationProperty Name="Games" Relationship="CrusadersModel.PlayerGame" ToRole="Game" FromRole="Player" />
+      </EntityType>
+      <EntityType Name="Ticket">
+        <Key>
+          <PropertyRef Name="id" />
+        </Key>
+        <Property Name="id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Price" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Game_id" Type="Edm.Int32" />
+        <Property Name="AgeOrType" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <NavigationProperty Name="Game" Relationship="CrusadersModel.FK_GameTicket" ToRole="Game" FromRole="Tickets" />
+      </EntityType>
+      <Association Name="FK_GameTicket">
+        <End Type="CrusadersModel.Game" Role="Game" Multiplicity="0..1" />
+        <End Type="CrusadersModel.Ticket" Role="Tickets" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Game">
+            <PropertyRef Name="id" />
+          </Principal>
+          <Dependent Role="Tickets">
+            <PropertyRef Name="Game_id" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="FK_ResultsGames">
+        <End Type="CrusadersModel.GameResult" Role="GamesResults" Multiplicity="0..1" />
+        <End Type="CrusadersModel.Game" Role="Game" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="GamesResults">
+            <PropertyRef Name="id" />
+          </Principal>
+          <Dependent Role="Game">
+            <PropertyRef Name="Result_id" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="PlayerGame">
+        <End Type="CrusadersModel.Player" Role="Player" Multiplicity="*" />
+        <End Type="CrusadersModel.Game" Role="Game" Multiplicity="*" />
+      </Association>
+    </Schema>
+    <Schema Namespace="CrusadersService" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="CrusadersEntities" m:IsDefaultEntityContainer="true" p6:LazyLoadingEnabled="true" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntitySet Name="Games1" EntityType="CrusadersModel.Game" />
+        <EntitySet Name="GameResults" EntityType="CrusadersModel.GameResult" />
+        <EntitySet Name="Players" EntityType="CrusadersModel.Player" />
+        <EntitySet Name="Tickets" EntityType="CrusadersModel.Ticket" />
+        <AssociationSet Name="FK_GameTicket" Association="CrusadersModel.FK_GameTicket">
+          <End Role="Game" EntitySet="Games1" />
+          <End Role="Tickets" EntitySet="Tickets" />
+        </AssociationSet>
+        <AssociationSet Name="FK_ResultsGames" Association="CrusadersModel.FK_ResultsGames">
+          <End Role="Game" EntitySet="Games1" />
+          <End Role="GamesResults" EntitySet="GameResults" />
+        </AssociationSet>
+        <AssociationSet Name="PlayerGame" Association="CrusadersModel.PlayerGame">
+          <End Role="Game" EntitySet="Games1" />
+          <End Role="Player" EntitySet="Players" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
