@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Show.aspx.cs" Inherits="Crusaders.Admin.Games.Show" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Show.aspx.cs" Inherits="Crusaders.Admin.News.Show" %>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
 
     <a href="Create.aspx" class="btn btn-primary btn-fab btn-raised mdi-content-add"></a>
@@ -10,24 +9,16 @@
     </div>
     <form id="Form1" runat="server">
         <div class="table-responsive">
-            <asp:Repeater ID="GamesRepeater" runat="server" OnLoad="GamesRepeater_Load">
+            <asp:Repeater ID="NewsRepeater" runat="server" OnLoad="NewsRepeater_Load">
                 <HeaderTemplate>
                     <table class="table table-striped">
                         <header>
-                            <th>Date</th>
-                            <th>Oponent</th>
-                            <th>Venue</th>
-                            <th>Comp</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            <th>Title</th>
                         </header>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <tr>
-                        <td><%# Eval("Data") %></td>
-                        <td><%# Eval("Opponent") %></td>
-                        <td><%# Eval("Venue") %></td>
-                        <td><%# Eval("Comp") %></td>
+                        <td><%# Eval("Title") %></td>
                         <td>
                             <a href="Edit.aspx?id=<%# Eval("id") %>" class="btn btn-info btn-fab btn-fab-mini btn-raised mdi-editor-border-color"></a>
                         </td>

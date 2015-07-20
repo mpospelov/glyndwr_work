@@ -1,0 +1,1 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Delete.aspx.cs" Inherits="Crusaders.Admin.News.Delete" %>

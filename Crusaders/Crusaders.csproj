@@ -151,14 +151,24 @@
     <Content Include="Admin\Default.aspx">
       <BrowseToURL>~/</BrowseToURL>
     </Content>
-    <Content Include="Admin\Games\CreateResults.aspx" />
+    <Content Include="Admin\Games\Results\Create.aspx" />
+    <Content Include="Admin\Games\Delete.aspx" />
+    <Content Include="Admin\Games\Results\Delete.aspx" />
+    <Content Include="Admin\Games\Edit.aspx" />
+    <Content Include="Admin\Games\Results\Edit.aspx" />
     <Content Include="Admin\Games\Show.aspx" />
-    <Content Include="Admin\Games\ShowAllResults.aspx" />
-    <Content Include="Admin\Players\CreatePlayer.aspx" />
+    <Content Include="Admin\Games\Results\Show.aspx" />
+    <Content Include="Admin\News\Create.aspx" />
+    <Content Include="Admin\News\Delete.aspx" />
+    <Content Include="Admin\News\Edit.aspx" />
+    <Content Include="Admin\News\Show.aspx" />
+    <Content Include="Admin\Players\Create.aspx" />
     <Content Include="Admin\Players\DataheroAccent.png" />
     <Content Include="Admin\Players\DataorderedList4.png" />
     <Content Include="Admin\Players\DataorderedList9.png" />
-    <Content Include="Admin\Players\ShowAllPlayers.aspx" />
+    <Content Include="Admin\Players\Delete.aspx" />
+    <Content Include="Admin\Players\Edit.aspx" />
+    <Content Include="Admin\Players\Show.aspx" />
     <Content Include="Admin\Tickets\Delete.aspx" />
     <Content Include="Admin\Tickets\Edit.aspx" />
     <Content Include="Content\fonts\LICENSE.txt" />
@@ -226,8 +236,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\Site_style.css" />
-    <Content Include="Crusaders.edmx.sql" />
-    <Content Include="Admin\Games\CreateGame.aspx" />
+    <Content Include="Admin\Games\Create.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\Crusaders_logo.png" />
@@ -254,24 +263,6 @@
     <Content Include="Images\ticket.jpg" />
     <Content Include="Images\win.png" />
     <Content Include="packages.config" />
-    <EntityDeploy Include="Crusaders.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Crusaders.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Crusaders.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Crusaders.edmx</DependentUpon>
-      <LastGenOutput>Crusaders.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Crusaders.edmx.diagram">
-      <DependentUpon>Crusaders.edmx</DependentUpon>
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Crusaders.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Crusaders.edmx</DependentUpon>
-      <LastGenOutput>Crusaders.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.11.3.js" />
     <Content Include="Scripts\material-bootstrap\bootstrap-material-datetimepicker.js" />
@@ -309,8 +300,8 @@
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Admin\Tickets\CreateTicket.aspx" />
-    <Content Include="Admin\Tickets\ShowAllTickets.aspx" />
+    <Content Include="Admin\Tickets\Create.aspx" />
+    <Content Include="Admin\Tickets\Show.aspx" />
     <None Include="Service References\CrusadersService\Reference.datasvcmap">
       <Generator>DataServicesCoreClientGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -338,12 +329,40 @@
     <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Games\CreateResults.aspx.cs">
-      <DependentUpon>CreateResults.aspx</DependentUpon>
+    <Compile Include="Admin\Games\Results\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Games\CreateResults.aspx.designer.cs">
-      <DependentUpon>CreateResults.aspx</DependentUpon>
+    <Compile Include="Admin\Games\Results\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Games\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Games\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Games\Results\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Games\Results\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Games\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Games\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Games\Results\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Games\Results\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Games\Show.aspx.cs">
       <DependentUpon>Show.aspx</DependentUpon>
@@ -352,26 +371,68 @@
     <Compile Include="Admin\Games\Show.aspx.designer.cs">
       <DependentUpon>Show.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Games\ShowAllResults.aspx.cs">
-      <DependentUpon>ShowAllResults.aspx</DependentUpon>
+    <Compile Include="Admin\Games\Results\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Games\ShowAllResults.aspx.designer.cs">
-      <DependentUpon>ShowAllResults.aspx</DependentUpon>
+    <Compile Include="Admin\Games\Results\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Players\CreatePlayer.aspx.cs">
-      <DependentUpon>CreatePlayer.aspx</DependentUpon>
+    <Compile Include="Admin\News\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Players\CreatePlayer.aspx.designer.cs">
-      <DependentUpon>CreatePlayer.aspx</DependentUpon>
+    <Compile Include="Admin\News\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Players\ShowAllPlayers.aspx.cs">
-      <DependentUpon>ShowAllPlayers.aspx</DependentUpon>
+    <Compile Include="Admin\News\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Players\ShowAllPlayers.aspx.designer.cs">
-      <DependentUpon>ShowAllPlayers.aspx</DependentUpon>
+    <Compile Include="Admin\News\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\News\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\News\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\News\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\News\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Players\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Players\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Players\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Players\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Players\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Players\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Players\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Players\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Tickets\Delete.aspx.cs">
       <DependentUpon>Delete.aspx</DependentUpon>
@@ -424,21 +485,6 @@
     <Compile Include="Admin\Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Crusaders.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Crusaders.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Crusaders.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Crusaders.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Crusaders.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Crusaders.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -446,24 +492,15 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Game.cs">
-      <DependentUpon>Crusaders.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GamesResult.cs">
-      <DependentUpon>Crusaders.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Games\CreateGame.aspx.cs">
-      <DependentUpon>CreateGame.aspx</DependentUpon>
+    <Compile Include="Admin\Games\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Games\CreateGame.aspx.designer.cs">
-      <DependentUpon>CreateGame.aspx</DependentUpon>
+    <Compile Include="Admin\Games\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Player.cs">
-      <DependentUpon>Crusaders.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\CrusadersService\Reference.cs">
@@ -499,25 +536,24 @@
     <Compile Include="Site\Tickets\ShowAllTickets.aspx.designer.cs">
       <DependentUpon>ShowAllTickets.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Ticket.cs">
-      <DependentUpon>Crusaders.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Tickets\CreateTicket.aspx.cs">
-      <DependentUpon>CreateTicket.aspx</DependentUpon>
+    <Compile Include="Admin\Tickets\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Tickets\CreateTicket.aspx.designer.cs">
-      <DependentUpon>CreateTicket.aspx</DependentUpon>
+    <Compile Include="Admin\Tickets\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Tickets\ShowAllTickets.aspx.cs">
-      <DependentUpon>ShowAllTickets.aspx</DependentUpon>
+    <Compile Include="Admin\Tickets\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Tickets\ShowAllTickets.aspx.designer.cs">
-      <DependentUpon>ShowAllTickets.aspx</DependentUpon>
+    <Compile Include="Admin\Tickets\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\News\Data\" />
+    <Folder Include="Admin\Players\Data\" />
     <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
     <Folder Include="Data\Games\" />

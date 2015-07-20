@@ -12,9 +12,8 @@ namespace Crusaders.Admin.Games
       
         protected void GamesRepeater_Load(object sender, EventArgs e)
         {
-            CrusadersEntities db = new CrusadersEntities();
-            GamesRepeater.DataSource = db.Games1.ToList();
-            GamesRepeater.DataBind();  
+            GamesRepeater.DataSource = Global.CrusadersEntitiesDB.Games1.ToList();
+            GamesRepeater.DataBind();    
         }
     }
 }

@@ -36,8 +36,8 @@
                     <li class="dropdown">
                          <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Tickets<b class="caret"></b></a>
                          <ul class="dropdown-menu">
-                            <li><a href="/Admin/Tickets/ShowAllTickets.aspx">Show all</a></li>
-                            <li><a href="/Admin/Tickets/CreateTicket.aspx">Create</a></li>
+                            <li><a href="/Admin/Tickets/Show.aspx">Show all</a></li>
+                            <li><a href="/Admin/Tickets/Create.aspx">Create</a></li>
                          </ul>
                     </li>
                      
@@ -45,22 +45,29 @@
                         <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Games<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="/Admin/Games/Show.aspx">Show all</a></li>
-                            <li><a href="/Admin/Games/CreateGame.aspx">Create</a></li>
+                            <li><a href="/Admin/Games/Create.aspx">Create</a></li>
                          </ul>
                     </li>
 
                     <li class="dropdown">
                          <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Results<b class="caret"></b></a>
                          <ul class="dropdown-menu">
-                            <li><a href="/Admin/Games/ShowAllResults.aspx">Show all</a></li>
-                            <li><a href="/Admin/Games/CreateResults.aspx">Create</a></li>
+                            <li><a href="/Admin/Games/Results/Show.aspx">Show all</a></li>
+                            <li><a href="/Admin/Games/Results/Create.aspx">Create</a></li>
                          </ul>
                     </li>
                     <li class="dropdown">
                          <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
                          <ul class="dropdown-menu">
-                            <li><a href="/Admin/Players/ShowAllPlayers.aspx">Show all</a></li>
-                            <li><a href="/Admin/Players/CreatePlayer.aspx">Create</a></li>
+                            <li><a href="/Admin/Players/Show.aspx">Show all</a></li>
+                            <li><a href="/Admin/Players/Create.aspx">Create</a></li>
+                         </ul>
+                    </li>
+                    <li class="dropdown">
+                         <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">News<b class="caret"></b></a>
+                         <ul class="dropdown-menu">
+                            <li><a href="/Admin/News/Show.aspx">Show all</a></li>
+                            <li><a href="/Admin/News/Create.aspx">Create</a></li>
                          </ul>
                     </li>
                 </ul>

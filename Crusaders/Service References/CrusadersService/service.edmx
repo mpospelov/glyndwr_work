@@ -39,6 +39,7 @@
         <Property Name="FamilyName" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         <Property Name="Position" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Avatar" Type="Edm.String" Nullable="false" />
         <NavigationProperty Name="Games" Relationship="CrusadersModel.PlayerGame" ToRole="Game" FromRole="Player" />
       </EntityType>
       <EntityType Name="Ticket">
@@ -52,6 +53,15 @@
         <Property Name="Game_id" Type="Edm.Int32" />
         <Property Name="AgeOrType" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         <NavigationProperty Name="Game" Relationship="CrusadersModel.FK_GameTicket" ToRole="Game" FromRole="Tickets" />
+      </EntityType>
+      <EntityType Name="NewsEntity">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Image" Type="Edm.String" Nullable="false" />
+        <Property Name="Content" Type="Edm.String" Nullable="false" />
+        <Property Name="Title" Type="Edm.String" Nullable="false" />
       </EntityType>
       <Association Name="FK_GameTicket">
         <End Type="CrusadersModel.Game" Role="Game" Multiplicity="0..1" />
@@ -88,6 +98,7 @@
         <EntitySet Name="GameResults" EntityType="CrusadersModel.GameResult" />
         <EntitySet Name="Players" EntityType="CrusadersModel.Player" />
         <EntitySet Name="Tickets" EntityType="CrusadersModel.Ticket" />
+        <EntitySet Name="NewsEntities" EntityType="CrusadersModel.NewsEntity" />
         <AssociationSet Name="FK_GameTicket" Association="CrusadersModel.FK_GameTicket">
           <End Role="Game" EntitySet="Games1" />
           <End Role="Tickets" EntitySet="Tickets" />

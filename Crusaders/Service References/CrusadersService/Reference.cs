@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 20/07/2015 19:23:10
+// Generation date: 20/07/2015 22:09:24
 namespace Crusaders.CrusadersService
 {
     
@@ -127,6 +127,23 @@ namespace Crusaders.CrusadersService
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<Ticket> _Tickets;
         /// <summary>
+        /// There are no comments for NewsEntities in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<NewsEntity> NewsEntities
+        {
+            get
+            {
+                if ((this._NewsEntities == null))
+                {
+                    this._NewsEntities = base.CreateQuery<NewsEntity>("NewsEntities");
+                }
+                return this._NewsEntities;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<NewsEntity> _NewsEntities;
+        /// <summary>
         /// There are no comments for Games1 in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -157,6 +174,14 @@ namespace Crusaders.CrusadersService
         public void AddToTickets(Ticket ticket)
         {
             base.AddObject("Tickets", ticket);
+        }
+        /// <summary>
+        /// There are no comments for NewsEntities in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToNewsEntities(NewsEntity newsEntity)
+        {
+            base.AddObject("NewsEntities", newsEntity);
         }
     }
     /// <summary>
@@ -632,8 +657,9 @@ namespace Crusaders.CrusadersService
         /// <param name="familyName">Initial value of FamilyName.</param>
         /// <param name="name">Initial value of Name.</param>
         /// <param name="position">Initial value of Position.</param>
+        /// <param name="avatar">Initial value of Avatar.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Player CreatePlayer(int ID, string number, string familyName, string name, string position)
+        public static Player CreatePlayer(int ID, string number, string familyName, string name, string position, string avatar)
         {
             Player player = new Player();
             player.id = ID;
@@ -641,6 +667,7 @@ namespace Crusaders.CrusadersService
             player.FamilyName = familyName;
             player.Name = name;
             player.Position = position;
+            player.Avatar = avatar;
             return player;
         }
         /// <summary>
@@ -748,6 +775,27 @@ namespace Crusaders.CrusadersService
         private string _Position;
         partial void OnPositionChanging(string value);
         partial void OnPositionChanged();
+        /// <summary>
+        /// There are no comments for Property Avatar in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Avatar
+        {
+            get
+            {
+                return this._Avatar;
+            }
+            set
+            {
+                this.OnAvatarChanging(value);
+                this._Avatar = value;
+                this.OnAvatarChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Avatar;
+        partial void OnAvatarChanging(string value);
+        partial void OnAvatarChanged();
         /// <summary>
         /// There are no comments for Games in the schema.
         /// </summary>
@@ -940,5 +988,116 @@ namespace Crusaders.CrusadersService
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private Game _Game;
+    }
+    /// <summary>
+    /// There are no comments for CrusadersModel.NewsEntity in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    public partial class NewsEntity
+    {
+        /// <summary>
+        /// Create a new NewsEntity object.
+        /// </summary>
+        /// <param name="ID">Initial value of Id.</param>
+        /// <param name="image">Initial value of Image.</param>
+        /// <param name="content">Initial value of Content.</param>
+        /// <param name="title">Initial value of Title.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static NewsEntity CreateNewsEntity(int ID, string image, string content, string title)
+        {
+            NewsEntity newsEntity = new NewsEntity();
+            newsEntity.Id = ID;
+            newsEntity.Image = image;
+            newsEntity.Content = content;
+            newsEntity.Title = title;
+            return newsEntity;
+        }
+        /// <summary>
+        /// There are no comments for Property Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                this._Id = value;
+                this.OnIdChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Id;
+        partial void OnIdChanging(int value);
+        partial void OnIdChanged();
+        /// <summary>
+        /// There are no comments for Property Image in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Image
+        {
+            get
+            {
+                return this._Image;
+            }
+            set
+            {
+                this.OnImageChanging(value);
+                this._Image = value;
+                this.OnImageChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Image;
+        partial void OnImageChanging(string value);
+        partial void OnImageChanged();
+        /// <summary>
+        /// There are no comments for Property Content in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Content
+        {
+            get
+            {
+                return this._Content;
+            }
+            set
+            {
+                this.OnContentChanging(value);
+                this._Content = value;
+                this.OnContentChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Content;
+        partial void OnContentChanging(string value);
+        partial void OnContentChanged();
+        /// <summary>
+        /// There are no comments for Property Title in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Title
+        {
+            get
+            {
+                return this._Title;
+            }
+            set
+            {
+                this.OnTitleChanging(value);
+                this._Title = value;
+                this.OnTitleChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Title;
+        partial void OnTitleChanging(string value);
+        partial void OnTitleChanged();
     }
 }

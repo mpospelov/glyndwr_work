@@ -11,9 +11,9 @@ namespace Crusaders
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CrusadersEntities db = new CrusadersEntities();
-            GamesRepeater.DataSource = db.Games1.Take(3).ToList();
-            GamesRepeater.DataBind();
+            GamesRepeater.DataSource = Global.CrusadersEntitiesDB.Games1.Take(3).ToList();
+            GamesRepeater.DataBind();   
+
         }
 
     }
