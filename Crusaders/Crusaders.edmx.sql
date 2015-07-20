@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 07/19/2015 19:37:34
--- Generated from EDMX file: C:\Crusaders\Crusaders\Crusaders\Crusaders.edmx
+-- Date Created: 07/20/2015 13:08:57
+-- Generated from EDMX file: C:\temp\Kultysheva\glyndwr_work\Crusaders\Crusaders.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -52,6 +52,7 @@ CREATE TABLE [dbo].[Tickets] (
     [Price] nvarchar(max)  NOT NULL,
     [Description] nvarchar(max)  NOT NULL,
     [Type] nvarchar(max)  NOT NULL,
+    [AgeOrType] nvarchar(max)  NOT NULL,
     [Game_id] int  NULL
 );
 GO
@@ -87,7 +88,8 @@ CREATE TABLE [dbo].[Players1] (
     [Number] nvarchar(max)  NOT NULL,
     [FamilyName] nvarchar(max)  NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
-    [Position] nvarchar(max)  NOT NULL
+    [Position] nvarchar(max)  NOT NULL,
+    [Avatar] nvarchar(max)  NOT NULL
 );
 GO
 

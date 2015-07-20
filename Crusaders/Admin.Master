@@ -27,20 +27,12 @@
                     <span class="icon-bar"></span>
                 </button>
               
-                <a class="navbar-brand" href="/Site/Default.aspx" style="margin-top: -14px">
+                <a class="navbar-brand" href="/" style="margin-top: -14px">
                     <img src="/Images/Crusaders_logo.png" alt="HTML tutorial" style="width: 62px">
                 </a>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Club<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="javascript:void(0)">Hystory</a></li>
-                            <li><a href="javascript:void(0)">Players</a></li>
-                            <li><a href="javascript:void(0)">Statistic</a></li>
-                        </ul>
-                    </li>   
+                <ul class="nav navbar-nav"> 
                     <li class="dropdown">
                          <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Tickets<b class="caret"></b></a>
                          <ul class="dropdown-menu">
@@ -62,6 +54,13 @@
                          <ul class="dropdown-menu">
                             <li><a href="/Admin/Games/ShowAllResults.aspx">Show all</a></li>
                             <li><a href="/Admin/Games/CreateResults.aspx">Create</a></li>
+                         </ul>
+                    </li>
+                    <li class="dropdown">
+                         <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
+                         <ul class="dropdown-menu">
+                            <li><a href="/Admin/Players/ShowAllPlayers.aspx">Show all</a></li>
+                            <li><a href="/Admin/Players/CreatePlayer.aspx">Create</a></li>
                          </ul>
                     </li>
                 </ul>

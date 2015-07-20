@@ -7,99 +7,126 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Crusaders.Admin.Tickets {
+namespace Crusaders.Admin.Players {
     
     
-    public partial class CreateTicket {
+    public partial class CreatePlayer {
         
         /// <summary>
-        /// TypeLbl control.
+        /// Form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TypeLbl;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
         
         /// <summary>
-        /// TypeSlc control.
+        /// FNameLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect TypeSlc;
+        protected global::System.Web.UI.WebControls.Label FNameLbl;
         
         /// <summary>
-        /// AgeLbl control.
+        /// TxtFName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AgeLbl;
+        protected global::System.Web.UI.WebControls.TextBox TxtFName;
         
         /// <summary>
-        /// AgeSlc control.
+        /// NameLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect AgeSlc;
+        protected global::System.Web.UI.WebControls.Label NameLbl;
         
         /// <summary>
-        /// PriceLbl control.
+        /// TxtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PriceLbl;
+        protected global::System.Web.UI.WebControls.TextBox TxtName;
         
         /// <summary>
-        /// TxtPrice control.
+        /// NmbLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPrice;
+        protected global::System.Web.UI.WebControls.Label NmbLbl;
         
         /// <summary>
-        /// DescLbl control.
+        /// TxtNmb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label DescLbl;
+        protected global::System.Web.UI.WebControls.TextBox TxtNmb;
         
         /// <summary>
-        /// TxtDesc control.
+        /// PstLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtDesc;
+        protected global::System.Web.UI.WebControls.Label PstLbl;
         
         /// <summary>
-        /// CnlBtn control.
+        /// TxtPst control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CnlBtn;
+        protected global::System.Web.UI.WebControls.TextBox TxtPst;
         
         /// <summary>
-        /// SbmBtn control.
+        /// File1Lbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SbmBtn;
+        protected global::System.Web.UI.WebControls.Label File1Lbl;
+        
+        /// <summary>
+        /// File1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputFile File1;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

@@ -137,6 +137,8 @@
     <Content Include="Admin\Games\CreateResults.aspx" />
     <Content Include="Admin\Games\Show.aspx" />
     <Content Include="Admin\Games\ShowAllResults.aspx" />
+    <Content Include="Admin\Players\CreatePlayer.aspx" />
+    <Content Include="Admin\Players\ShowAllPlayers.aspx" />
     <Content Include="Content\fonts\LICENSE.txt" />
     <Content Include="Content\fonts\Material-Design-Icons.svg" />
     <Content Include="Content\Site.css" />
@@ -287,6 +289,7 @@
     <Content Include="Global.asax" />
     <Content Include="Admin\Tickets\CreateTicket.aspx" />
     <Content Include="Admin\Tickets\ShowAllTickets.aspx" />
+    <Content Include="Site\Club\History.aspx" />
     <Content Include="Site\Results\ShowAllResults.aspx" />
     <Content Include="Site\Tickets\ShowAllTickets.aspx" />
     <Content Include="Web.config">
@@ -329,6 +332,20 @@
     </Compile>
     <Compile Include="Admin\Games\ShowAllResults.aspx.designer.cs">
       <DependentUpon>ShowAllResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Players\CreatePlayer.aspx.cs">
+      <DependentUpon>CreatePlayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Players\CreatePlayer.aspx.designer.cs">
+      <DependentUpon>CreatePlayer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Players\ShowAllPlayers.aspx.cs">
+      <DependentUpon>ShowAllPlayers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Players\ShowAllPlayers.aspx.designer.cs">
+      <DependentUpon>ShowAllPlayers.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
@@ -416,6 +433,13 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Site\Club\History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\Club\History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site\Results\ShowAllResults.aspx.cs">
       <DependentUpon>ShowAllResults.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -449,11 +473,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\Games\Data\" />
+    <Folder Include="Admin\Players\Data\" />
     <Folder Include="App_Data\" />
     <Folder Include="Data\Games\" />
     <Folder Include="GamesResult\" />
     <Folder Include="Players\" />
-    <Folder Include="Site\Club\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Account\Web.config" />

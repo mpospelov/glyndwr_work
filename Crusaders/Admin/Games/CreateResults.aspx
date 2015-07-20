@@ -30,7 +30,7 @@
                 <div class="checkbox">
                     <label for="MainContent_ChkWin">
                         <asp:CheckBox ID="ChkWin" runat="server" />
-                        <span class="checkbox-material"><span class="check"></span></span>Win
+                        <span class="checkbox-material"><span class="check"></span></span> Win
                     </label>
                 </div>
             </div>
