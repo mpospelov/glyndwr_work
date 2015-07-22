@@ -36,6 +36,7 @@ namespace Crusaders.Admin.Games
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
+            var db = Global.CrusadersEntitiesDB();
             res.Data = TxtData.Text;
             res.Opponent = TxtOpnt.Text;
             res.Venue = TxtVenue.Text;
@@ -43,8 +44,8 @@ namespace Crusaders.Admin.Games
             res.Points = TxtPnt.Text;
             res.Result = ChkWin.Checked;
 
-            Global.CrusadersEntitiesDB().UpdateObject(res);
-            Global.CrusadersEntitiesDB().SaveChanges();
+            db.UpdateObject(res);
+            db.SaveChanges();
             Response.Redirect("Show.aspx");
         }
 

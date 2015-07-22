@@ -23,6 +23,7 @@ namespace Crusaders.Admin.Games
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
+            var db = Global.CrusadersEntitiesDB();
             CrusadersService.Game gm = new CrusadersService.Game();
 
             gm.Data = TxtData.Text;
@@ -54,8 +55,8 @@ namespace Crusaders.Admin.Games
                 Response.Write("Please select a file to upload.");
             }
 
-            Global.CrusadersEntitiesDB().AddToGames1(gm);
-            Global.CrusadersEntitiesDB().SaveChanges();
+            db.AddToGames1(gm);
+            db.SaveChanges();
         }
     }
 }

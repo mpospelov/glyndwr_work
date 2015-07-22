@@ -22,6 +22,7 @@ namespace Crusaders.Admin.Games
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
+            var db = Global.CrusadersEntitiesDB();
             CrusadersService.GameResult res = new CrusadersService.GameResult();
 
             res.Comp = TxtComp.Text;
@@ -32,8 +33,8 @@ namespace Crusaders.Admin.Games
             res.Result = ChkWin.Checked;
 
 
-            Global.CrusadersEntitiesDB().AddToGameResults(res);
-            Global.CrusadersEntitiesDB().SaveChanges();
+            db.AddToGameResults(res);
+            db.SaveChanges();
             
         }
     }
