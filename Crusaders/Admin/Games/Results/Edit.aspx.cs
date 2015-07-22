@@ -44,6 +44,7 @@ namespace Crusaders.Admin.Games
             res.Result = ChkWin.Checked;
 
             Global.CrusadersEntitiesDB().UpdateObject(res);
+            Global.CrusadersEntitiesDB().SaveChanges();
             Response.Redirect("Show.aspx");
         }
 

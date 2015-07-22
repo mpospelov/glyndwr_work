@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.News
 {
-    public partial class Create : System.Web.UI.Page
+    public partial class Create : App_Code.MessagePage
     {
         protected System.Web.UI.HtmlControls.HtmlInputButton Submit1;
 
@@ -35,7 +35,6 @@ namespace Crusaders.Admin.News
                 try
                 {
                     File1.PostedFile.SaveAs(SaveLocation);
-                    Response.Write("The file has been uploaded.");
                     news.Image = fn;
                 }
                 catch (Exception ex)
@@ -47,13 +46,11 @@ namespace Crusaders.Admin.News
                 }
 
             }
-            else
-            {
-                Response.Write("Please select a file to upload.");
-            }
-
+           
             Global.CrusadersEntitiesDB().AddToNewsEntities(news);
             Global.CrusadersEntitiesDB().SaveChanges();
+            setCreatedMessage();
+            Response.Redirect("Show.aspx");
         }
     }
 }

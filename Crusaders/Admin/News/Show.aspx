@@ -14,6 +14,8 @@
                     <table class="table table-striped">
                         <header>
                             <th>Title</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </header>
                 </HeaderTemplate>
                 <ItemTemplate>

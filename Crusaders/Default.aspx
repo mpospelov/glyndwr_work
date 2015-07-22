@@ -67,12 +67,16 @@
     </div>
     <hr class="featurette-divider">
     <div class="row featurette">
-        <div class="col-md-7">
-          <h2>First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="/Images/news_1.jpg" /" alt="Generic placeholder image">
-        </div>
+        <asp:Repeater ID="NewsRepeater" runat="server" OnLoad="Page_Load">
+            <ItemTemplate>
+                <div class="col-md-7">
+                    <h2><%# Eval("Title") %></h2>
+                    <p class="lead"><%# Eval("Content") %></p>
+                </div>
+                <div class="col-md-5">
+                  <img class="featurette-image img-responsive center-block" src="Admin/News/Data/<%# Eval("Image") %>" /" alt="Generic placeholder image">
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
     </div>
 </asp:Content>

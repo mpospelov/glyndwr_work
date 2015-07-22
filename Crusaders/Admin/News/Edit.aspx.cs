@@ -36,6 +36,7 @@ namespace Crusaders.Admin.News
             news.Content = TxtCnt.Text;
 
             Global.CrusadersEntitiesDB().UpdateObject(news);
+            Global.CrusadersEntitiesDB().SaveChanges();
             Response.Redirect("Show.aspx");
         }
 

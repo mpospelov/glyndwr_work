@@ -38,6 +38,7 @@ namespace Crusaders.Admin.Tickets
             ticket.Price = TxtPrice.Text;
             ticket.Description = TxtDesc.Text;
             ticket.AgeOrType = AgeSlc.Value;
+
             Global.CrusadersEntitiesDB().UpdateObject(ticket);
             Global.CrusadersEntitiesDB().SaveChanges();
             setUpdatedMessage();

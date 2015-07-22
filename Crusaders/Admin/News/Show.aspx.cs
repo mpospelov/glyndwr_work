@@ -7,12 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.News
 {
-    public partial class Show : System.Web.UI.Page
+    public partial class Show : App_Code.MessagePage
     {
         protected void NewsRepeater_Load(object sender, EventArgs e)
         {
             NewsRepeater.DataSource = Global.CrusadersEntitiesDB().NewsEntities.ToList();
-            NewsRepeater.DataBind();    
+            NewsRepeater.DataBind();
+            handleMessage();
         }
     }
 }

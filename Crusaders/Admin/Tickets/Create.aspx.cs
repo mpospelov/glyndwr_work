@@ -16,14 +16,15 @@ namespace Crusaders.Admin.Tickets
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
+            var db = Global.CrusadersEntitiesDB();
             CrusadersService.Ticket tic = new CrusadersService.Ticket();
             tic.Type = TypeSlc.Value;
             tic.Price = TxtPrice.Text;
             tic.Description = TxtDesc.Text;
             tic.AgeOrType = AgeSlc.Value;
 
-            Global.CrusadersEntitiesDB().AddToTickets(tic);
-            Global.CrusadersEntitiesDB().SaveChanges();
+            db.AddToTickets(tic);
+            db.SaveChanges();
             setCreatedMessage();
             Response.Redirect("Show.aspx");
 

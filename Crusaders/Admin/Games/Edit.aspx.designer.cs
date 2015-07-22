@@ -112,6 +112,60 @@ namespace Crusaders.Admin.Games {
         protected global::System.Web.UI.HtmlControls.HtmlInputFile File1;
         
         /// <summary>
+        /// ResLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ResLbl;
+        
+        /// <summary>
+        /// ResultRepeater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater ResultRepeater;
+        
+        /// <summary>
+        /// ResSlc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField ResSlc;
+        
+        /// <summary>
+        /// PlrLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PlrLbl;
+        
+        /// <summary>
+        /// PlayerRepeater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater PlayerRepeater;
+        
+        /// <summary>
+        /// PlrSlc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField PlrSlc;
+        
+        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>
