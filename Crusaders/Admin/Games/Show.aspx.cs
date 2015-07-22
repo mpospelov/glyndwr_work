@@ -9,9 +9,11 @@ namespace Crusaders.Admin.Games
 {
     public partial class Show : System.Web.UI.Page
     {
-      
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void GamesRepeater_Load(object sender, EventArgs e)
         {
+            db = Global.CrusadersEntitiesDB();
             GamesRepeater.DataSource = Global.CrusadersEntitiesDB().Games1.ToList();
             GamesRepeater.DataBind();    
         }

@@ -10,10 +10,11 @@ namespace Crusaders.Admin.News
     public partial class Create : App_Code.MessagePage
     {
         protected System.Web.UI.HtmlControls.HtmlInputButton Submit1;
+        protected static CrusadersService.CrusadersEntities db;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            db = Global.CrusadersEntitiesDB();
         }
 
         protected void CnlBtn_Click(object sender, EventArgs e)
@@ -23,8 +24,6 @@ namespace Crusaders.Admin.News
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
-            var db = Global.CrusadersEntitiesDB();
-
             CrusadersService.NewsEntity news = new CrusadersService.NewsEntity();
 
             news.Title = TxtTlt.Text;

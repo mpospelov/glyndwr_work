@@ -9,11 +9,13 @@ namespace Crusaders.Admin.Games
 {
     public partial class ShowAllResults : System.Web.UI.Page
     {
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void ResultsRepeater_Load(object sender, EventArgs e)
         {
-            ResultsRepeater.DataSource = Global.CrusadersEntitiesDB().GameResults.ToList();
+            db = Global.CrusadersEntitiesDB();
+            ResultsRepeater.DataSource = db.GameResults.ToList();
             ResultsRepeater.DataBind();   
-  
         }
 
     }

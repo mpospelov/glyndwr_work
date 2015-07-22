@@ -9,9 +9,11 @@ namespace Crusaders.Admin.Players
 {
     public partial class CreatePlayer : App_Code.MessagePage
     {
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            db = Global.CrusadersEntitiesDB();
         }
 
         protected void CnlBtn_Click(object sender, EventArgs e)
@@ -21,7 +23,6 @@ namespace Crusaders.Admin.Players
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
-            var db = Global.CrusadersEntitiesDB();
 
             CrusadersService.Player pl = new CrusadersService.Player();
 

@@ -10,15 +10,24 @@
 namespace Crusaders.Site.Club {
     
     
-    public partial class ShowPlayer {
+    public partial class ShowGame {
         
         /// <summary>
-        /// GamesRepeater control.
+        /// Form control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater GamesRepeater;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Form;
+        
+        /// <summary>
+        /// PlayersRepeater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater PlayersRepeater;
     }
 }

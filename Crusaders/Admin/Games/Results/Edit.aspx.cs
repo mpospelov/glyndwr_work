@@ -10,14 +10,17 @@ namespace Crusaders.Admin.Games
     public partial class EditResult : System.Web.UI.Page
     {
         static CrusadersService.GameResult res;
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            db = Global.CrusadersEntitiesDB();
             string id = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(id))
             {
                 if (!IsPostBack)
                 {
-                    res = Global.CrusadersEntitiesDB().GameResults.Where(x => x.id == int.Parse(id)).Single();
+                    res = db.GameResults.Where(x => x.id == int.Parse(id)).Single();
 
                     TxtData.Text = res.Data;
                     TxtOpnt.Text = res.Opponent;
@@ -36,7 +39,6 @@ namespace Crusaders.Admin.Games
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
-            var db = Global.CrusadersEntitiesDB();
             res.Data = TxtData.Text;
             res.Opponent = TxtOpnt.Text;
             res.Venue = TxtVenue.Text;

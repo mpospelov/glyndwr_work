@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Site.Club
 {
-    public partial class ShowPlayer : System.Web.UI.Page
+    public partial class ShowGame : System.Web.UI.Page
     {
-        protected static CrusadersService.Player player;
+        public static CrusadersService.Game game;
         protected static CrusadersService.CrusadersEntities db;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -21,16 +21,17 @@ namespace Crusaders.Site.Club
                 {
                     db = Global.CrusadersEntitiesDB();
 
-                    player = db.Players.Where(x => x.id == int.Parse(id)).First();
+                    game = db.Games1.Where(x => x.id == int.Parse(id)).First();
 
                 }
             }
-            else {
-                Response.Redirect("Players.aspx");
+            else
+            {
+                Response.Redirect("Games.aspx");
             }
 
-            GamesRepeater.DataSource = player.Games.ToList();
-            GamesRepeater.DataBind();  
+            PlayersRepeater.DataSource = game.Players.ToList();
+            PlayersRepeater.DataBind();
         }
     }
 }

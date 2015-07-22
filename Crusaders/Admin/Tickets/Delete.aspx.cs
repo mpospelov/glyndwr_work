@@ -9,12 +9,13 @@ namespace Crusaders.Admin.Tickets
 {
     public partial class Delete : App_Code.MessagePage
     {
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            db = Global.CrusadersEntitiesDB();
             string id = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(id) && !IsPostBack) {
-                var db = Global.CrusadersEntitiesDB();
-
                 CrusadersService.Ticket ticket = db.Tickets.Where(x => x.id == int.Parse(id)).Single();
                 db.DeleteObject(ticket);
                 db.SaveChanges();

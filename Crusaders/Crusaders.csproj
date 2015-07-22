@@ -304,14 +304,15 @@
     <Content Include="Global.asax" />
     <Content Include="Admin\Tickets\Create.aspx" />
     <Content Include="Admin\Tickets\Show.aspx" />
-    <Content Include="Service References\CrusadersService\Reference.datasvcmap">
+    <None Include="Service References\CrusadersService\Reference.datasvcmap">
       <Generator>DataServicesCoreClientGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <Content Include="Site\Club\Games.aspx" />
     <Content Include="Site\Club\History.aspx" />
     <Content Include="Site\Club\News.aspx" />
     <Content Include="Site\Club\Players.aspx" />
+    <Content Include="Site\Club\ShowGame.aspx" />
     <Content Include="Site\Club\ShowPlayer.aspx" />
     <Content Include="Site\Results\ShowAllResults.aspx" />
     <Content Include="Site\Tickets\ShowAllTickets.aspx" />
@@ -566,6 +567,13 @@
     <Compile Include="Site\Club\Players.aspx.designer.cs">
       <DependentUpon>Players.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Site\Club\ShowGame.aspx.cs">
+      <DependentUpon>ShowGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\Club\ShowGame.aspx.designer.cs">
+      <DependentUpon>ShowGame.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site\Club\ShowPlayer.aspx.cs">
       <DependentUpon>ShowPlayer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -630,7 +638,7 @@
     <Content Include="Content\fonts\RobotoDraftRegular.woff2" />
     <Content Include="Content\fonts\Material-Design-Icons.woff2" />
     <Content Include="Admin.Master" />
-    <Content Include="Service References\CrusadersService\service.edmx" />
+    <None Include="Service References\CrusadersService\service.edmx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

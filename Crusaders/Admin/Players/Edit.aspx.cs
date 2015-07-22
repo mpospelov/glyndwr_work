@@ -11,16 +11,16 @@ namespace Crusaders.Admin.Players
     {
         public static CrusadersService.Player pl;
         static List<CrusadersService.Game> games;
+        protected static CrusadersService.CrusadersEntities db;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            db = Global.CrusadersEntitiesDB();
             string id = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(id))
             {
                 if (!IsPostBack)
                 {
-                    var db = Global.CrusadersEntitiesDB();
-
                     pl = db.Players.Where(x => x.id == int.Parse(id)).Single();
                     games = pl.Games.ToList();
                     GamesRepeater.DataSource = db.Games1.ToList();
@@ -40,8 +40,6 @@ namespace Crusaders.Admin.Players
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
-            var db = Global.CrusadersEntitiesDB();
-
             pl.FamilyName = TxtFName.Text;
             pl.Name = TxtName.Text;
             pl.Number = TxtNmb.Text;

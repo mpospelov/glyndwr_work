@@ -9,14 +9,15 @@ namespace Crusaders.Admin.Tickets
 {
     public partial class CreateTicket : App_Code.MessagePage
     {
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            db = Global.CrusadersEntitiesDB();
         }
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
-            var db = Global.CrusadersEntitiesDB();
             CrusadersService.Ticket tic = new CrusadersService.Ticket();
             tic.Type = TypeSlc.Value;
             tic.Price = TxtPrice.Text;

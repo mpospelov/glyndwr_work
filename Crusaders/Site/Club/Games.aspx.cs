@@ -11,7 +11,10 @@ namespace Crusaders.Site.Club
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var db = Global.CrusadersEntitiesDB();
 
+            GamesRepeater.DataSource = db.Games1.ToList();
+            GamesRepeater.DataBind();
         }
     }
 }

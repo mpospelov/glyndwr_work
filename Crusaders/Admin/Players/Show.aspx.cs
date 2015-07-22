@@ -9,10 +9,11 @@ namespace Crusaders.Admin.Players
 {
     public partial class ShowAllPlayers : App_Code.MessagePage
     {
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void PlayersRepeater_Load(object sender, EventArgs e)
         {
-            var db = Global.CrusadersEntitiesDB();
-
+            db = Global.CrusadersEntitiesDB();
             PlayersRepeater.DataSource = db.Players.ToList();
             PlayersRepeater.DataBind();
             handleMessage();
