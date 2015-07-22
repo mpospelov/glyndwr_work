@@ -37,8 +37,9 @@
                         <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Club<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="/Site/Club/History.aspx">Hystory</a></li>
-                            <li><a href="javascript:void(0)">Players</a></li>
-                            <li><a href="javascript:void(0)">News</a></li>
+                            <li><a href="/Site/Club/Players.aspx">Players</a></li>
+                            <li><a href="/Site/Club/Games.aspx">Games</a></li>
+                            <li><a href="/Site/Club/News.aspx">News</a></li>
                         </ul>
                     </li>   
                     <li><a href="/Site/Tickets/ShowAllTickets.aspx">Tickets</a></li>
