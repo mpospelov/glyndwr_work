@@ -9,6 +9,7 @@ namespace Crusaders.Admin.Tickets
 {
     public partial class ShowAll : Crusaders.App_Code.MessagePage
     {
+
         protected void TicketsRepeater_Load(object sender, EventArgs e)
         {
             var db = Global.CrusadersEntitiesDB();

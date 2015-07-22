@@ -10,8 +10,11 @@ namespace Crusaders.Admin.News
     public partial class Edit : System.Web.UI.Page
     {
         static CrusadersService.NewsEntity news;
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            db = Global.CrusadersEntitiesDB();
             string id = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(id))
             {
@@ -32,8 +35,6 @@ namespace Crusaders.Admin.News
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
-            var db = Global.CrusadersEntitiesDB();
-
             news.Title = TxtTlt.Text;
             news.Content = TxtCnt.Text;
 

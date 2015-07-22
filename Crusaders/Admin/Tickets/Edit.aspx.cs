@@ -9,7 +9,9 @@ namespace Crusaders.Admin.Tickets
 {
     public partial class Edit : App_Code.MessagePage
     {
-        static CrusadersService.Ticket ticket;
+        protected static CrusadersService.Ticket ticket;
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = Request.QueryString["id"];
@@ -17,7 +19,9 @@ namespace Crusaders.Admin.Tickets
             {
                 if (!IsPostBack)
                 {
-                    ticket = Global.CrusadersEntitiesDB().Tickets.Where(x => x.id == int.Parse(id)).Single();
+                    db = Global.CrusadersEntitiesDB();
+
+                    ticket = db.Tickets.Where(x => x.id == int.Parse(id)).First();
 
                     TypeSlc.Value = ticket.Type;
                     TxtPrice.Text = ticket.Price;
@@ -34,13 +38,10 @@ namespace Crusaders.Admin.Tickets
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
-            var db = Global.CrusadersEntitiesDB();
-
             ticket.Type = TypeSlc.Value;
             ticket.Price = TxtPrice.Text;
             ticket.Description = TxtDesc.Text;
             ticket.AgeOrType = AgeSlc.Value;
-
             db.UpdateObject(ticket);
             db.SaveChanges();
             setUpdatedMessage();

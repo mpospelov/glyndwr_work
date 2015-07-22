@@ -9,6 +9,8 @@ namespace Crusaders.Admin.Games
 {
     public partial class DeleteGames : System.Web.UI.Page
     {
+        protected static CrusadersService.CrusadersEntities db = Global.CrusadersEntitiesDB();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = Request.QueryString["id"];

@@ -304,10 +304,10 @@
     <Content Include="Global.asax" />
     <Content Include="Admin\Tickets\Create.aspx" />
     <Content Include="Admin\Tickets\Show.aspx" />
-    <Content Include="Service References\CrusadersService\Reference.datasvcmap">
+    <None Include="Service References\CrusadersService\Reference.datasvcmap">
       <Generator>DataServicesCoreClientGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <Content Include="Site\Club\History.aspx" />
     <Content Include="Site\Results\ShowAllResults.aspx" />
     <Content Include="Site\Tickets\ShowAllTickets.aspx" />
@@ -598,7 +598,7 @@
     <Content Include="Content\fonts\RobotoDraftRegular.woff2" />
     <Content Include="Content\fonts\Material-Design-Icons.woff2" />
     <Content Include="Admin.Master" />
-    <Content Include="Service References\CrusadersService\service.edmx" />
+    <None Include="Service References\CrusadersService\service.edmx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

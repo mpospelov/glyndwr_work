@@ -9,10 +9,11 @@ namespace Crusaders.Admin.News
 {
     public partial class Show : App_Code.MessagePage
     {
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void NewsRepeater_Load(object sender, EventArgs e)
         {
-            var db = Global.CrusadersEntitiesDB();
-
+            db = Global.CrusadersEntitiesDB();
             NewsRepeater.DataSource = db.NewsEntities.ToList();
             NewsRepeater.DataBind();
             handleMessage();

@@ -13,7 +13,6 @@ namespace Crusaders.Admin.Games
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void CnlBtn_Click(object sender, EventArgs e)
@@ -24,6 +23,7 @@ namespace Crusaders.Admin.Games
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
             var db = Global.CrusadersEntitiesDB();
+
             CrusadersService.Game gm = new CrusadersService.Game();
 
             gm.Data = TxtData.Text;

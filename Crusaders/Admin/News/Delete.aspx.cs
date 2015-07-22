@@ -9,13 +9,14 @@ namespace Crusaders.Admin.News
 {
     public partial class Delete : System.Web.UI.Page
     {
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            db = Global.CrusadersEntitiesDB();
             string id = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(id) && !IsPostBack)
             {
-                var db = Global.CrusadersEntitiesDB();
-
                 CrusadersService.NewsEntity news = db.NewsEntities.Where(x => x.Id == int.Parse(id)).Single();
                 db.DeleteObject(news);
                 db.SaveChanges();

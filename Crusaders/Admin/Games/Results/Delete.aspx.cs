@@ -9,12 +9,15 @@ namespace Crusaders.Admin.Games
 {
     public partial class DeleteResult : System.Web.UI.Page
     {
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            db = Global.CrusadersEntitiesDB();
             string id = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(id) && !IsPostBack)
             {
-                CrusadersService.GameResult res = Global.CrusadersEntitiesDB().GameResults.Where(x => x.id == int.Parse(id)).Single();
+                CrusadersService.GameResult res = db.GameResults.Where(x => x.id == int.Parse(id)).Single();
                 Global.CrusadersEntitiesDB().DeleteObject(res);
                 Global.CrusadersEntitiesDB().SaveChanges();
             }

@@ -10,8 +10,11 @@ namespace Crusaders.Admin.Games
     public partial class EditGames : System.Web.UI.Page
     {
         static CrusadersService.Game gm;
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            db = Global.CrusadersEntitiesDB();
             ResultRepeater.DataSource = Global.CrusadersEntitiesDB().GameResults.ToList();
             ResultRepeater.DataBind();
             PlayerRepeater.DataSource = Global.CrusadersEntitiesDB().Players.ToList();
@@ -42,7 +45,6 @@ namespace Crusaders.Admin.Games
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
-            var db = Global.CrusadersEntitiesDB();
             gm.Data = TxtData.Text;
             gm.Opponent = TxtOpnt.Text;
             gm.Venue = TxtVenue.Text;

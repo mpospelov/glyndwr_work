@@ -10,9 +10,11 @@ namespace Crusaders.Admin.Games
     public partial class GamesResults : System.Web.UI.Page
     {
         public CheckBox ChkWin;
+        protected static CrusadersService.CrusadersEntities db;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            db = Global.CrusadersEntitiesDB();
         }
 
         protected void CnlBtn_Click(object sender, EventArgs e)
@@ -22,7 +24,6 @@ namespace Crusaders.Admin.Games
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
-            var db = Global.CrusadersEntitiesDB();
             CrusadersService.GameResult res = new CrusadersService.GameResult();
 
             res.Comp = TxtComp.Text;
