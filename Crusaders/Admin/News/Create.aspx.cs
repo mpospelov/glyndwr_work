@@ -23,6 +23,8 @@ namespace Crusaders.Admin.News
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
+            var db = Global.CrusadersEntitiesDB();
+
             CrusadersService.NewsEntity news = new CrusadersService.NewsEntity();
 
             news.Title = TxtTlt.Text;
@@ -47,8 +49,8 @@ namespace Crusaders.Admin.News
 
             }
            
-            Global.CrusadersEntitiesDB().AddToNewsEntities(news);
-            Global.CrusadersEntitiesDB().SaveChanges();
+            db.AddToNewsEntities(news);
+            db.SaveChanges();
             setCreatedMessage();
             Response.Redirect("Show.aspx");
         }

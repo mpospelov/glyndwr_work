@@ -32,11 +32,13 @@ namespace Crusaders.Admin.News
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
+            var db = Global.CrusadersEntitiesDB();
+
             news.Title = TxtTlt.Text;
             news.Content = TxtCnt.Text;
 
-            Global.CrusadersEntitiesDB().UpdateObject(news);
-            Global.CrusadersEntitiesDB().SaveChanges();
+            db.UpdateObject(news);
+            db.SaveChanges();
             Response.Redirect("Show.aspx");
         }
 

@@ -11,7 +11,9 @@ namespace Crusaders.Admin.News
     {
         protected void NewsRepeater_Load(object sender, EventArgs e)
         {
-            NewsRepeater.DataSource = Global.CrusadersEntitiesDB().NewsEntities.ToList();
+            var db = Global.CrusadersEntitiesDB();
+
+            NewsRepeater.DataSource = db.NewsEntities.ToList();
             NewsRepeater.DataBind();
             handleMessage();
         }

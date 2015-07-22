@@ -21,6 +21,8 @@ namespace Crusaders.Admin.Players
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
+            var db = Global.CrusadersEntitiesDB();
+
             CrusadersService.Player pl = new CrusadersService.Player();
 
             pl.FamilyName = TxtFName.Text;
@@ -43,8 +45,8 @@ namespace Crusaders.Admin.Players
 
             }
         
-            Global.CrusadersEntitiesDB().AddToPlayers(pl);
-            Global.CrusadersEntitiesDB().SaveChanges();
+            db.AddToPlayers(pl);
+            db.SaveChanges();
             setCreatedMessage();
             Response.Redirect("Show.aspx");
         }

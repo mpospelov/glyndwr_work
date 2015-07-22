@@ -13,9 +13,11 @@ namespace Crusaders.Admin.Tickets
         {
             string id = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(id) && !IsPostBack) {
-                CrusadersService.Ticket ticket = Global.CrusadersEntitiesDB().Tickets.Where(x => x.id == int.Parse(id)).Single();
-                Global.CrusadersEntitiesDB().DeleteObject(ticket);
-                Global.CrusadersEntitiesDB().SaveChanges();
+                var db = Global.CrusadersEntitiesDB();
+
+                CrusadersService.Ticket ticket = db.Tickets.Where(x => x.id == int.Parse(id)).Single();
+                db.DeleteObject(ticket);
+                db.SaveChanges();
                 setDeletedMessage();
             }
             Response.Redirect("Show.aspx");

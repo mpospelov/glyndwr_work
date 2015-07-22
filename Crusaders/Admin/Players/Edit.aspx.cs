@@ -19,9 +19,11 @@ namespace Crusaders.Admin.Players
             {
                 if (!IsPostBack)
                 {
-                    pl = Global.CrusadersEntitiesDB().Players.Where(x => x.id == int.Parse(id)).Single();
+                    var db = Global.CrusadersEntitiesDB();
+
+                    pl = db.Players.Where(x => x.id == int.Parse(id)).Single();
                     games = pl.Games.ToList();
-                    GamesRepeater.DataSource = Global.CrusadersEntitiesDB().Games1.ToList();
+                    GamesRepeater.DataSource = db.Games1.ToList();
 
                     TxtFName.Text = pl.FamilyName;
                     TxtName.Text = pl.Name;
@@ -38,13 +40,15 @@ namespace Crusaders.Admin.Players
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
+            var db = Global.CrusadersEntitiesDB();
+
             pl.FamilyName = TxtFName.Text;
             pl.Name = TxtName.Text;
             pl.Number = TxtNmb.Text;
             pl.Position = TxtPst.Text;
 
-            Global.CrusadersEntitiesDB().UpdateObject(pl);
-            Global.CrusadersEntitiesDB().SaveChanges();
+            db.UpdateObject(pl);
+            db.SaveChanges();
             setUpdatedMessage();
 
             Response.Redirect("Show.aspx");
