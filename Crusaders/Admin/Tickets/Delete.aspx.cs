@@ -7,17 +7,18 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.Tickets
 {
-    public partial class Delete : System.Web.UI.Page
+    public partial class Delete : App_Code.MessagePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(id) && !IsPostBack) {
-                CrusadersService.Ticket ticket = Global.CrusadersEntitiesDB.Tickets.Where(x => x.id == int.Parse(id)).Single();
-                Global.CrusadersEntitiesDB.DeleteObject(ticket);
-                Global.CrusadersEntitiesDB.SaveChanges();
+                CrusadersService.Ticket ticket = Global.CrusadersEntitiesDB().Tickets.Where(x => x.id == int.Parse(id)).Single();
+                Global.CrusadersEntitiesDB().DeleteObject(ticket);
+                Global.CrusadersEntitiesDB().SaveChanges();
+                setDeletedMessage();
             }
-            Response.Redirect("ShowAllTickets.aspx");
+            Response.Redirect("Show.aspx");
         }
     }
 }

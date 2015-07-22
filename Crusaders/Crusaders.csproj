@@ -162,12 +162,14 @@
     <Content Include="Admin\News\Delete.aspx" />
     <Content Include="Admin\News\Edit.aspx" />
     <Content Include="Admin\News\Show.aspx" />
+    <Content Include="Admin\Players\AddGame.aspx" />
     <Content Include="Admin\Players\Create.aspx" />
     <Content Include="Admin\Players\DataheroAccent.png" />
     <Content Include="Admin\Players\DataorderedList4.png" />
     <Content Include="Admin\Players\DataorderedList9.png" />
     <Content Include="Admin\Players\Delete.aspx" />
     <Content Include="Admin\Players\Edit.aspx" />
+    <Content Include="Admin\Players\RemoveGame.aspx" />
     <Content Include="Admin\Players\Show.aspx" />
     <Content Include="Admin\Tickets\Delete.aspx" />
     <Content Include="Admin\Tickets\Edit.aspx" />
@@ -302,10 +304,10 @@
     <Content Include="Global.asax" />
     <Content Include="Admin\Tickets\Create.aspx" />
     <Content Include="Admin\Tickets\Show.aspx" />
-    <None Include="Service References\CrusadersService\Reference.datasvcmap">
+    <Content Include="Service References\CrusadersService\Reference.datasvcmap">
       <Generator>DataServicesCoreClientGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    </Content>
     <Content Include="Site\Club\History.aspx" />
     <Content Include="Site\Results\ShowAllResults.aspx" />
     <Content Include="Site\Tickets\ShowAllTickets.aspx" />
@@ -406,6 +408,13 @@
     <Compile Include="Admin\News\Show.aspx.designer.cs">
       <DependentUpon>Show.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Players\AddGame.aspx.cs">
+      <DependentUpon>AddGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Players\AddGame.aspx.designer.cs">
+      <DependentUpon>AddGame.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Players\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -427,6 +436,13 @@
     <Compile Include="Admin\Players\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Players\RemoveGame.aspx.cs">
+      <DependentUpon>RemoveGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Players\RemoveGame.aspx.designer.cs">
+      <DependentUpon>RemoveGame.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Players\Show.aspx.cs">
       <DependentUpon>Show.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -447,6 +463,9 @@
     </Compile>
     <Compile Include="Admin\Tickets\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\MessagePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
@@ -554,7 +573,6 @@
   <ItemGroup>
     <Folder Include="Admin\News\Data\" />
     <Folder Include="Admin\Players\Data\" />
-    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
     <Folder Include="Data\Games\" />
     <Folder Include="GamesResult\" />
@@ -580,7 +598,7 @@
     <Content Include="Content\fonts\RobotoDraftRegular.woff2" />
     <Content Include="Content\fonts\Material-Design-Icons.woff2" />
     <Content Include="Admin.Master" />
-    <None Include="Service References\CrusadersService\service.edmx" />
+    <Content Include="Service References\CrusadersService\service.edmx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

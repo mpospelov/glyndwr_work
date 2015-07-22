@@ -5,7 +5,12 @@
 .featurette-divider {
    border-top: 1px solid #66bb6a;
 }
-
+.admin .table td {
+    vertical-align: middle;
+}
+.admin .table.center td, .admin .table.center th{
+    text-align: center;
+}
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;

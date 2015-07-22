@@ -14,9 +14,9 @@ namespace Crusaders.Admin.News
             string id = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(id) && !IsPostBack)
             {
-                CrusadersService.NewsEntity news = Global.CrusadersEntitiesDB.NewsEntities.Where(x => x.Id == int.Parse(id)).Single();
-                Global.CrusadersEntitiesDB.DeleteObject(news);
-                Global.CrusadersEntitiesDB.SaveChanges();
+                CrusadersService.NewsEntity news = Global.CrusadersEntitiesDB().NewsEntities.Where(x => x.Id == int.Parse(id)).Single();
+                Global.CrusadersEntitiesDB().DeleteObject(news);
+                Global.CrusadersEntitiesDB().SaveChanges();
             }
             Response.Redirect("Show.aspx");
         }

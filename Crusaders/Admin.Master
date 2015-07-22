@@ -90,11 +90,12 @@
                             </LoggedInTemplate>
                         </asp:LoginView>
                     </section>
-                    </div>
+                 </div>
             </div>
         </header>
         <div id="body">
-            <section class="content-wrapper main-content clear-fix">
+            <section class="content-wrapper main-content clear-fix admin">
+                <asp:ContentPlaceHolder runat="server" ID="Messages" />
                 <asp:ContentPlaceHolder runat="server" ID="MainContent" />
             </section> 
         </div>

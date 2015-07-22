@@ -17,7 +17,7 @@ namespace Crusaders.Admin.News
             {
                 if (!IsPostBack)
                 {
-                    news = Global.CrusadersEntitiesDB.NewsEntities.Where(x => x.Id == int.Parse(id)).Single();
+                    news = Global.CrusadersEntitiesDB().NewsEntities.Where(x => x.Id == int.Parse(id)).Single();
 
                     TxtTlt.Text = news.Title;
                     TxtCnt.Text = news.Content;;
@@ -35,7 +35,7 @@ namespace Crusaders.Admin.News
             news.Title = TxtTlt.Text;
             news.Content = TxtCnt.Text;
 
-            Global.CrusadersEntitiesDB.UpdateObject(news);
+            Global.CrusadersEntitiesDB().UpdateObject(news);
             Response.Redirect("Show.aspx");
         }
 

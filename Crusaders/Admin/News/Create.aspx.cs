@@ -52,8 +52,8 @@ namespace Crusaders.Admin.News
                 Response.Write("Please select a file to upload.");
             }
 
-            Global.CrusadersEntitiesDB.AddToNewsEntities(news);
-            Global.CrusadersEntitiesDB.SaveChanges();
+            Global.CrusadersEntitiesDB().AddToNewsEntities(news);
+            Global.CrusadersEntitiesDB().SaveChanges();
         }
     }
 }

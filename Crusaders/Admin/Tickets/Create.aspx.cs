@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.Tickets
 {
-    public partial class CreateTicket : System.Web.UI.Page
+    public partial class CreateTicket : App_Code.MessagePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,14 +22,16 @@ namespace Crusaders.Admin.Tickets
             tic.Description = TxtDesc.Text;
             tic.AgeOrType = AgeSlc.Value;
 
-            Global.CrusadersEntitiesDB.AddToTickets(tic);
-            Global.CrusadersEntitiesDB.SaveChanges();
+            Global.CrusadersEntitiesDB().AddToTickets(tic);
+            Global.CrusadersEntitiesDB().SaveChanges();
+            setCreatedMessage();
+            Response.Redirect("Show.aspx");
 
         }
 
         protected void CnlBtn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Show.aspx");
         }
     }
 }

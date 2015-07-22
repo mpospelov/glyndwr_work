@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="16bc8dbb-4089-4fb5-8141-5a7551a620a7" xmlns="urn:schemas-microsoft-com:xml-dataservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5daa70b1-f2f4-4037-92d9-e21ac315b337" xmlns="urn:schemas-microsoft-com:xml-dataservicemap">
   <MetadataSources>
     <MetadataSource Address="http://glyndwrcrusadersservice.apphb.com/CrusadersService.svc/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.edmx" MetadataType="Edmx" ID="28316051-3470-4026-a5b5-2b29a1ab1ef5" SourceId="1" SourceUrl="http://glyndwrcrusadersservice.apphb.com/CrusadersService.svc/" />
+    <MetadataFile FileName="service.edmx" MetadataType="Edmx" ID="b17338cb-4a87-4ee8-8b22-49d8ac00fcfe" SourceId="1" SourceUrl="http://glyndwrcrusadersservice.apphb.com/CrusadersService.svc/" />
   </Metadata>
   <Extensions />
   <Parameters>

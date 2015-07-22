@@ -14,9 +14,9 @@ namespace Crusaders.Admin.Games
             string id = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(id) && !IsPostBack)
             {
-                CrusadersService.Game game = Global.CrusadersEntitiesDB.Games1.Where(x => x.id == int.Parse(id)).Single();
-                Global.CrusadersEntitiesDB.DeleteObject(game);
-                Global.CrusadersEntitiesDB.SaveChanges();
+                CrusadersService.Game game = Global.CrusadersEntitiesDB().Games1.Where(x => x.id == int.Parse(id)).Single();
+                Global.CrusadersEntitiesDB().DeleteObject(game);
+                Global.CrusadersEntitiesDB().SaveChanges();
             }
             Response.Redirect("Show.aspx");
         }

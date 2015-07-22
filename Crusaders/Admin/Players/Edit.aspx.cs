@@ -7,9 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.Players
 {
-    public partial class Edit : System.Web.UI.Page
+    public partial class Edit : App_Code.MessagePage
     {
-        static CrusadersService.Player pl;
+        public static CrusadersService.Player pl;
+        static List<CrusadersService.Game> games;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = Request.QueryString["id"];
@@ -17,13 +19,14 @@ namespace Crusaders.Admin.Players
             {
                 if (!IsPostBack)
                 {
-                    pl = Global.CrusadersEntitiesDB.Players.Where(x => x.id == int.Parse(id)).Single();
+                    pl = Global.CrusadersEntitiesDB().Players.Where(x => x.id == int.Parse(id)).Single();
+                    games = pl.Games.ToList();
+                    GamesRepeater.DataSource = Global.CrusadersEntitiesDB().Games1.ToList();
 
                     TxtFName.Text = pl.FamilyName;
                     TxtName.Text = pl.Name;
                     TxtNmb.Text = pl.Number;
                     TxtPst.Text = pl.Position;
-
                 }
             }
             else
@@ -40,13 +43,20 @@ namespace Crusaders.Admin.Players
             pl.Number = TxtNmb.Text;
             pl.Position = TxtPst.Text;
 
-            Global.CrusadersEntitiesDB.UpdateObject(pl);
+            Global.CrusadersEntitiesDB().UpdateObject(pl);
+            setUpdatedMessage();
             Response.Redirect("Show.aspx");
         }
 
         protected void CnlBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public bool isGameAdded(object game_id)
+        {
+            int id = int.Parse(game_id.ToString());
+            return(games.Find(x => x.id == id) != null);
         }
     }
 }

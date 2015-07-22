@@ -32,8 +32,8 @@ namespace Crusaders.Admin.Games
             res.Result = ChkWin.Checked;
 
 
-            Global.CrusadersEntitiesDB.AddToGameResults(res);
-            Global.CrusadersEntitiesDB.SaveChanges();
+            Global.CrusadersEntitiesDB().AddToGameResults(res);
+            Global.CrusadersEntitiesDB().SaveChanges();
             
         }
     }

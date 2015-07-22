@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.Players
 {
-    public partial class CreatePlayer : System.Web.UI.Page
+    public partial class CreatePlayer : App_Code.MessagePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,7 +16,7 @@ namespace Crusaders.Admin.Players
 
         protected void CnlBtn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Show.aspx");
         }
 
         protected void SbmBtn_Click(object sender, EventArgs e)
@@ -34,25 +34,19 @@ namespace Crusaders.Admin.Players
                 try
                 {
                     File1.PostedFile.SaveAs(SaveLocation);
-                    Response.Write("The file has been uploaded.");
                     pl.Avatar = fn;
                 }
                 catch (Exception ex)
                 {
                     Response.Write("Error: " + ex.Message);
-                    //Note: Exception.Message returns a detailed message that describes the current exception. 
-                    //For security reasons, we do not recommend that you return Exception.Message to end users in 
-                    //production environments. It would be better to return a generic error message. 
                 }
 
             }
-            else
-            {
-                Response.Write("Please select a file to upload.");
-            }
-
-            Global.CrusadersEntitiesDB.AddToPlayers(pl);
-            Global.CrusadersEntitiesDB.SaveChanges();
+        
+            Global.CrusadersEntitiesDB().AddToPlayers(pl);
+            Global.CrusadersEntitiesDB().SaveChanges();
+            setCreatedMessage();
+            Response.Redirect("Show.aspx");
         }
     }
 }

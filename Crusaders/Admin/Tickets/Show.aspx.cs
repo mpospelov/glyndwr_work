@@ -7,13 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.Tickets
 {
-    public partial class ShowAll : System.Web.UI.Page
+    public partial class ShowAll : Crusaders.App_Code.MessagePage
     {
-
         protected void TicketsRepeater_Load(object sender, EventArgs e)
         {
-            TicketsRepeater.DataSource = Global.CrusadersEntitiesDB.Tickets.ToList();
-            TicketsRepeater.DataBind();      
+            TicketsRepeater.DataSource = Global.CrusadersEntitiesDB().Tickets.ToList();
+            TicketsRepeater.DataBind();
+            handleMessage();
         }
 
 

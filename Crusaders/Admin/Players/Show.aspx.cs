@@ -7,12 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.Players
 {
-    public partial class ShowAllPlayers : System.Web.UI.Page
+    public partial class ShowAllPlayers : App_Code.MessagePage
     {
         protected void PlayersRepeater_Load(object sender, EventArgs e)
         {
-            PlayersRepeater.DataSource = Global.CrusadersEntitiesDB.Players.ToList();
-            PlayersRepeater.DataBind();   
+            PlayersRepeater.DataSource = Global.CrusadersEntitiesDB().Players.ToList();
+            PlayersRepeater.DataBind();
+            handleMessage();
         }
     }
 }

@@ -54,8 +54,8 @@ namespace Crusaders.Admin.Games
                 Response.Write("Please select a file to upload.");
             }
 
-            Global.CrusadersEntitiesDB.AddToGames1(gm);
-            Global.CrusadersEntitiesDB.SaveChanges();
+            Global.CrusadersEntitiesDB().AddToGames1(gm);
+            Global.CrusadersEntitiesDB().SaveChanges();
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Crusaders.Admin.Games
             {
                 if (!IsPostBack)
                 {
-                    gm = Global.CrusadersEntitiesDB.Games1.Where(x => x.id == int.Parse(id)).Single();
+                    gm = Global.CrusadersEntitiesDB().Games1.Where(x => x.id == int.Parse(id)).Single();
 
                     TxtData.Text = gm.Data;
                     TxtOpnt.Text = gm.Opponent;
@@ -40,7 +40,7 @@ namespace Crusaders.Admin.Games
             gm.Venue = TxtVenue.Text;
             gm.Comp = TxtVenue.Text;
 
-            Global.CrusadersEntitiesDB.UpdateObject(gm);
+            Global.CrusadersEntitiesDB().UpdateObject(gm);
             Response.Redirect("Show.aspx");
         }
 

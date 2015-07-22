@@ -5,16 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Crusaders
+namespace Crusaders.Admin.Players
 {
-    public partial class Default : Page
+    public partial class AddGame : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GamesRepeater.DataSource = Global.CrusadersEntitiesDB().Games1.Take(3).ToList();
-            GamesRepeater.DataBind();   
 
         }
-
     }
 }

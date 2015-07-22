@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.Tickets
 {
-    public partial class Edit : System.Web.UI.Page
+    public partial class Edit : App_Code.MessagePage
     {
         static CrusadersService.Ticket ticket;
         protected void Page_Load(object sender, EventArgs e)
@@ -17,7 +17,7 @@ namespace Crusaders.Admin.Tickets
             {
                 if (!IsPostBack)
                 {
-                    ticket = Global.CrusadersEntitiesDB.Tickets.Where(x => x.id == int.Parse(id)).Single();
+                    ticket = Global.CrusadersEntitiesDB().Tickets.Where(x => x.id == int.Parse(id)).Single();
 
                     TypeSlc.Value = ticket.Type;
                     TxtPrice.Text = ticket.Price;
@@ -27,7 +27,7 @@ namespace Crusaders.Admin.Tickets
             }
             else
             {
-                Response.Redirect("ShowAllTickets.aspx");
+                Response.Redirect("Show.aspx");
             }
         }
 
@@ -38,13 +38,15 @@ namespace Crusaders.Admin.Tickets
             ticket.Price = TxtPrice.Text;
             ticket.Description = TxtDesc.Text;
             ticket.AgeOrType = AgeSlc.Value;
-            Global.CrusadersEntitiesDB.UpdateObject(ticket);
+            Global.CrusadersEntitiesDB().UpdateObject(ticket);
+            Global.CrusadersEntitiesDB().SaveChanges();
+            setUpdatedMessage();
             Response.Redirect("Show.aspx");
         }
 
         protected void CnlBtn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Show.aspx");
         }
     }
 }

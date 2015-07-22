@@ -11,7 +11,7 @@ namespace Crusaders.Admin.Games
     {
         protected void ResultsRepeater_Load(object sender, EventArgs e)
         {
-            ResultsRepeater.DataSource = Global.CrusadersEntitiesDB.GameResults.ToList();
+            ResultsRepeater.DataSource = Global.CrusadersEntitiesDB().GameResults.ToList();
             ResultsRepeater.DataBind();   
   
         }

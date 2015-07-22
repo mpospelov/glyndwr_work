@@ -12,7 +12,7 @@ namespace Crusaders.Site.Results
 
         protected void GamesRepeater_Load(object sender, EventArgs e)
         {
-            ResultsRepeater.DataSource = Global.CrusadersEntitiesDB.GameResults.ToList();
+            ResultsRepeater.DataSource = Global.CrusadersEntitiesDB().GameResults.ToList();
             ResultsRepeater.DataBind();     
  
         }

@@ -17,7 +17,7 @@ namespace Crusaders.Admin.Games
             {
                 if (!IsPostBack)
                 {
-                    res = Global.CrusadersEntitiesDB.GameResults.Where(x => x.id == int.Parse(id)).Single();
+                    res = Global.CrusadersEntitiesDB().GameResults.Where(x => x.id == int.Parse(id)).Single();
 
                     TxtData.Text = res.Data;
                     TxtOpnt.Text = res.Opponent;
@@ -43,7 +43,7 @@ namespace Crusaders.Admin.Games
             res.Points = TxtPnt.Text;
             res.Result = ChkWin.Checked;
 
-            Global.CrusadersEntitiesDB.UpdateObject(res);
+            Global.CrusadersEntitiesDB().UpdateObject(res);
             Response.Redirect("Show.aspx");
         }
 
