@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.Games
 {
-    public partial class DeleteResult : System.Web.UI.Page
+    public partial class DeleteResult : App_Code.MessagePage
     {
         protected static CrusadersService.CrusadersEntities db;
 
@@ -20,6 +20,7 @@ namespace Crusaders.Admin.Games
                 CrusadersService.GameResult res = db.GameResults.Where(x => x.id == int.Parse(id)).Single();
                 Global.CrusadersEntitiesDB().DeleteObject(res);
                 Global.CrusadersEntitiesDB().SaveChanges();
+                setDeletedMessage();
             }
             Response.Redirect("Show.aspx");
         }

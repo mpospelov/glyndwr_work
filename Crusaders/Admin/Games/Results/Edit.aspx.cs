@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.Games
 {
-    public partial class EditResult : System.Web.UI.Page
+    public partial class EditResult : App_Code.MessagePage
     {
         static CrusadersService.GameResult res;
         protected static CrusadersService.CrusadersEntities db;
@@ -48,6 +48,7 @@ namespace Crusaders.Admin.Games
 
             db.UpdateObject(res);
             db.SaveChanges();
+            setUpdatedMessage();
             Response.Redirect("Show.aspx");
         }
 

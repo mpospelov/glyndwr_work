@@ -151,6 +151,8 @@
     <Content Include="Admin\Default.aspx">
       <BrowseToURL>~/</BrowseToURL>
     </Content>
+    <Content Include="Admin\Games\AddPlayer.aspx" />
+    <Content Include="Admin\Games\RemovePlayer.aspx" />
     <Content Include="Admin\Games\Results\Create.aspx" />
     <Content Include="Admin\Games\Delete.aspx" />
     <Content Include="Admin\Games\Results\Delete.aspx" />
@@ -330,6 +332,20 @@
     </Compile>
     <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Games\AddPlayer.aspx.cs">
+      <DependentUpon>AddPlayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Games\AddPlayer.aspx.designer.cs">
+      <DependentUpon>AddPlayer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Games\RemovePlayer.aspx.cs">
+      <DependentUpon>RemovePlayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Games\RemovePlayer.aspx.designer.cs">
+      <DependentUpon>RemovePlayer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Games\Results\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>

@@ -10,9 +10,8 @@
         <Property Name="Venue" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         <Property Name="Comp" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         <Property Name="Data" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-        <Property Name="Image" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        <Property Name="Image" Type="Edm.String" MaxLength="Max" FixedLength="false" Unicode="true" />
         <Property Name="Result_id" Type="Edm.Int32" />
-        <Property Name="Player_id" Type="Edm.Int32" />
         <NavigationProperty Name="Tickets" Relationship="CrusadersModel.FK_GameTicket" ToRole="Tickets" FromRole="Game" />
         <NavigationProperty Name="GamesResult" Relationship="CrusadersModel.FK_ResultsGames" ToRole="GamesResults" FromRole="Game" />
         <NavigationProperty Name="Players" Relationship="CrusadersModel.PlayerGame" ToRole="Player" FromRole="Game" />
@@ -39,7 +38,7 @@
         <Property Name="FamilyName" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         <Property Name="Position" Type="Edm.String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-        <Property Name="Avatar" Type="Edm.String" Nullable="false" />
+        <Property Name="Avatar" Type="Edm.String" />
         <NavigationProperty Name="Games" Relationship="CrusadersModel.PlayerGame" ToRole="Game" FromRole="Player" />
       </EntityType>
       <EntityType Name="Ticket">
@@ -59,9 +58,10 @@
           <PropertyRef Name="Id" />
         </Key>
         <Property Name="Id" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
-        <Property Name="Image" Type="Edm.String" Nullable="false" />
+        <Property Name="Image" Type="Edm.String" />
         <Property Name="Content" Type="Edm.String" Nullable="false" />
         <Property Name="Title" Type="Edm.String" Nullable="false" />
+        <Property Name="Property1" Type="Edm.DateTime" Nullable="false" p6:StoreGeneratedPattern="None" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
       </EntityType>
       <Association Name="FK_GameTicket">
         <End Type="CrusadersModel.Game" Role="Game" Multiplicity="0..1" />

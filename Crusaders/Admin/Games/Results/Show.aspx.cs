@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.Games
 {
-    public partial class ShowAllResults : System.Web.UI.Page
+    public partial class ShowAllResults : App_Code.MessagePage
     {
         protected static CrusadersService.CrusadersEntities db;
 
@@ -15,7 +15,8 @@ namespace Crusaders.Admin.Games
         {
             db = Global.CrusadersEntitiesDB();
             ResultsRepeater.DataSource = db.GameResults.ToList();
-            ResultsRepeater.DataBind();   
+            ResultsRepeater.DataBind();
+            handleMessage();
         }
 
     }

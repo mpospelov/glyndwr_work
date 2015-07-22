@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.Games
 {
-    public partial class CreateGame : System.Web.UI.Page
+    public partial class CreateGame : App_Code.MessagePage
     {
         protected System.Web.UI.HtmlControls.HtmlInputButton Submit1;
 
@@ -57,6 +57,7 @@ namespace Crusaders.Admin.Games
 
             db.AddToGames1(gm);
             db.SaveChanges();
+            setUpdatedMessage();
         }
     }
 }

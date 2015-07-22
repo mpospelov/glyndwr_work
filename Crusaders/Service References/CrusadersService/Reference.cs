@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 22/07/2015 22:43:10
+// Generation date: 22/07/2015 23:53:41
 namespace Crusaders.CrusadersService
 {
     
@@ -201,9 +201,8 @@ namespace Crusaders.CrusadersService
         /// <param name="venue">Initial value of Venue.</param>
         /// <param name="comp">Initial value of Comp.</param>
         /// <param name="data">Initial value of Data.</param>
-        /// <param name="image">Initial value of Image.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Game CreateGame(int ID, string opponent, string venue, string comp, string data, string image)
+        public static Game CreateGame(int ID, string opponent, string venue, string comp, string data)
         {
             Game game = new Game();
             game.id = ID;
@@ -211,7 +210,6 @@ namespace Crusaders.CrusadersService
             game.Venue = venue;
             game.Comp = comp;
             game.Data = data;
-            game.Image = image;
             return game;
         }
         /// <summary>
@@ -361,27 +359,6 @@ namespace Crusaders.CrusadersService
         private global::System.Nullable<int> _Result_id;
         partial void OnResult_idChanging(global::System.Nullable<int> value);
         partial void OnResult_idChanged();
-        /// <summary>
-        /// There are no comments for Property Player_id in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> Player_id
-        {
-            get
-            {
-                return this._Player_id;
-            }
-            set
-            {
-                this.OnPlayer_idChanging(value);
-                this._Player_id = value;
-                this.OnPlayer_idChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _Player_id;
-        partial void OnPlayer_idChanging(global::System.Nullable<int> value);
-        partial void OnPlayer_idChanged();
         /// <summary>
         /// There are no comments for Tickets in the schema.
         /// </summary>
@@ -657,9 +634,8 @@ namespace Crusaders.CrusadersService
         /// <param name="familyName">Initial value of FamilyName.</param>
         /// <param name="name">Initial value of Name.</param>
         /// <param name="position">Initial value of Position.</param>
-        /// <param name="avatar">Initial value of Avatar.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Player CreatePlayer(int ID, string number, string familyName, string name, string position, string avatar)
+        public static Player CreatePlayer(int ID, string number, string familyName, string name, string position)
         {
             Player player = new Player();
             player.id = ID;
@@ -667,7 +643,6 @@ namespace Crusaders.CrusadersService
             player.FamilyName = familyName;
             player.Name = name;
             player.Position = position;
-            player.Avatar = avatar;
             return player;
         }
         /// <summary>
@@ -1002,17 +977,17 @@ namespace Crusaders.CrusadersService
         /// Create a new NewsEntity object.
         /// </summary>
         /// <param name="ID">Initial value of Id.</param>
-        /// <param name="image">Initial value of Image.</param>
         /// <param name="content">Initial value of Content.</param>
         /// <param name="title">Initial value of Title.</param>
+        /// <param name="property1">Initial value of Property1.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static NewsEntity CreateNewsEntity(int ID, string image, string content, string title)
+        public static NewsEntity CreateNewsEntity(int ID, string content, string title, global::System.DateTime property1)
         {
             NewsEntity newsEntity = new NewsEntity();
             newsEntity.Id = ID;
-            newsEntity.Image = image;
             newsEntity.Content = content;
             newsEntity.Title = title;
+            newsEntity.Property1 = property1;
             return newsEntity;
         }
         /// <summary>
@@ -1099,5 +1074,26 @@ namespace Crusaders.CrusadersService
         private string _Title;
         partial void OnTitleChanging(string value);
         partial void OnTitleChanged();
+        /// <summary>
+        /// There are no comments for Property Property1 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTime Property1
+        {
+            get
+            {
+                return this._Property1;
+            }
+            set
+            {
+                this.OnProperty1Changing(value);
+                this._Property1 = value;
+                this.OnProperty1Changed();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTime _Property1;
+        partial void OnProperty1Changing(global::System.DateTime value);
+        partial void OnProperty1Changed();
     }
 }

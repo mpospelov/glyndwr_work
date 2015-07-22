@@ -35,17 +35,7 @@
                     </select>
                     <asp:HiddenField ID="ResSlc" runat="server" />
                 </div>
-                <asp:Label ID="PlrLbl" runat="server" Text="Player" CssClass="col-lg-2 control-label"></asp:Label>
-                <div class="col-lg-10">
-                    <select class="form-control" onchange="$('#MainContent_PlrSlc').val(this.value)">
-                        <asp:Repeater ID="PlayerRepeater" runat="server" OnLoad="Page_Load">
-                            <ItemTemplate>
-                                <option value="<%# Eval("id") %>"><%# Eval("FamilyName") %></option>
-                            </ItemTemplate>
-                        </asp:Repeater>
-                    </select>
-                    <asp:HiddenField ID="PlrSlc" runat="server" />
-                </div>
+
             </div>
             <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
@@ -53,6 +43,39 @@
                     <asp:Button ID="Button2" runat="server" OnClick="SbmBtn_Click" Text="Submit" CssClass="btn btn-primary" />
                 </div>
             </div>
+
+            <h3 class="panel-title">Players Table</h3>
+
+            <table class="table table-bordered table-striped center">
+                <thead>
+                    <th>id</th>
+                    <th>Number</th>
+                    <th>FamilyName</th>
+                    <th>Name</th>
+                    <th>Position</th>
+
+                    <th>Buttons</th>
+                </thead>
+                <% foreach(var player in allPlayers){ %>
+  
+                        <tr>
+                            <td><%: player.id %></td>
+                            <td><%: player.Number %></td>
+                            <td><%: player.FamilyName%></td>
+                            <td><%: player.Name%></td>
+                            <td><%: player.Position %></td>
+
+                            <td>
+                                <% if (isPlayerAdded(player.id)){ %>
+         
+                                <a href="RemovePlayer.aspx?id=<%: gm.id %>&player_id=<%: player.id %>" class="btn btn-info btn-fab btn-fab-mini btn-raised mdi-editor-border-color"></a>
+                                <% }else { %>
+                                <a href="AddPlayer.aspx?id=<%: gm.id %>&player_id=<%: player.id %>" class="btn btn-info btn-fab btn-fab-mini btn-raised mdi-editor-border-color"></a>
+                                <% } %>
+                            </td>
+                        </tr>
+                  <% } %>
+            </table>
         </div>
     </form>
 </asp:Content>

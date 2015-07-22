@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Crusaders.Admin.Games
 {
-    public partial class GamesResults : System.Web.UI.Page
+    public partial class GamesResults : App_Code.MessagePage
     {
         public CheckBox ChkWin;
         protected static CrusadersService.CrusadersEntities db;
@@ -36,7 +36,8 @@ namespace Crusaders.Admin.Games
 
             db.AddToGameResults(res);
             db.SaveChanges();
-            
+            setCreatedMessage();
+            Response.Redirect("Show.aspx");
         }
     }
 }
