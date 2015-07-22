@@ -14,9 +14,11 @@ namespace Crusaders.Admin.Players
             string id = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(id) && !IsPostBack)
             {
-                CrusadersService.Player pl = Global.CrusadersEntitiesDB().Players.Where(x => x.id == int.Parse(id)).Single();
-                Global.CrusadersEntitiesDB().DeleteObject(pl);
-                Global.CrusadersEntitiesDB().SaveChanges();
+                var db = Global.CrusadersEntitiesDB();
+
+                CrusadersService.Player pl = db.Players.Where(x => x.id == int.Parse(id)).Single();
+                db.DeleteObject(pl);
+                db.SaveChanges();
                 setDeletedMessage();
             }
             Response.Redirect("Show.aspx");

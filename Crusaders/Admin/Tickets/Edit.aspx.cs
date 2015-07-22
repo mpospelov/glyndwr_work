@@ -34,13 +34,15 @@ namespace Crusaders.Admin.Tickets
 
         protected void SbmBtn_Click(object sender, EventArgs e)
         {
+            var db = Global.CrusadersEntitiesDB();
+
             ticket.Type = TypeSlc.Value;
             ticket.Price = TxtPrice.Text;
             ticket.Description = TxtDesc.Text;
             ticket.AgeOrType = AgeSlc.Value;
 
-            Global.CrusadersEntitiesDB().UpdateObject(ticket);
-            Global.CrusadersEntitiesDB().SaveChanges();
+            db.UpdateObject(ticket);
+            db.SaveChanges();
             setUpdatedMessage();
             Response.Redirect("Show.aspx");
         }

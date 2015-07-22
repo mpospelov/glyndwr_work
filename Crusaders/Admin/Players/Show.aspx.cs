@@ -11,7 +11,9 @@ namespace Crusaders.Admin.Players
     {
         protected void PlayersRepeater_Load(object sender, EventArgs e)
         {
-            PlayersRepeater.DataSource = Global.CrusadersEntitiesDB().Players.ToList();
+            var db = Global.CrusadersEntitiesDB();
+
+            PlayersRepeater.DataSource = db.Players.ToList();
             PlayersRepeater.DataBind();
             handleMessage();
         }

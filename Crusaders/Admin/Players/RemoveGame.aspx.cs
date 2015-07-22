@@ -14,10 +14,12 @@ namespace Crusaders.Admin.Players
             string id = Request.QueryString["id"];
             string game_id = Request.QueryString["game_id"];
             if(!string.IsNullOrEmpty(id) && !string.IsNullOrEmpty(game_id)){
-                CrusadersService.Player player = Global.CrusadersEntitiesDB().Players.Where( x => x.id == int.Parse(id)).First();
-                CrusadersService.Game game = Global.CrusadersEntitiesDB().Games1.Where(x => x.id == int.Parse(game_id)).First();
+                var db = Global.CrusadersEntitiesDB();
+
+                CrusadersService.Player player = db.Players.Where( x => x.id == int.Parse(id)).First();
+                CrusadersService.Game game = db.Games1.Where(x => x.id == int.Parse(game_id)).First();
                 player.Games.Add(game);
-                Global.CrusadersEntitiesDB().SaveChanges();
+                db.SaveChanges();
             }
             setRelationAddedMessage();
             Response.Redirect(string.Format("Edit.aspx?id={0}", id));
