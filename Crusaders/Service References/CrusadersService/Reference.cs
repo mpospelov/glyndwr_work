@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 22/07/2015 23:53:41
+
 namespace Crusaders.CrusadersService
 {
     

@@ -50,7 +50,6 @@ namespace Crusaders.Admin.Games
             gm.Venue = TxtVenue.Text;
             gm.Comp = TxtVenue.Text;
             gm.Result_id = Int32.Parse(ResSlc.Value);
-
             db.UpdateObject(gm);
             db.SaveChanges();
             setUpdatedMessage();
