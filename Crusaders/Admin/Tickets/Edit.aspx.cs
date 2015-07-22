@@ -39,6 +39,7 @@ namespace Crusaders.Admin.Tickets
             ticket.Description = TxtDesc.Text;
             ticket.AgeOrType = AgeSlc.Value;
             Global.CrusadersEntitiesDB.UpdateObject(ticket);
+            Global.CrusadersEntitiesDB.SaveChanges();
             Response.Redirect("Show.aspx");
         }
 

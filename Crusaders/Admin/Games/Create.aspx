@@ -23,6 +23,7 @@
                 <asp:Label ID="File1Lbl" runat="server" Text="Opponent Image" CssClass="col-lg-2 control-label"></asp:Label>
                 <div class="col-lg-10">
                     <input type="file" id="File1" name="File1" runat="server" class="form-control" />
+                
                 </div>
             </div>
             <div class="form-group">

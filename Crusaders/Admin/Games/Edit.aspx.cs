@@ -12,6 +12,11 @@ namespace Crusaders.Admin.Games
         static CrusadersService.Game gm;
         protected void Page_Load(object sender, EventArgs e)
         {
+            ResultRepeater.DataSource = Global.CrusadersEntitiesDB.GameResults.ToList();
+            ResultRepeater.DataBind();
+            PlayerRepeater.DataSource = Global.CrusadersEntitiesDB.Players.ToList();
+            PlayerRepeater.DataBind();
+
             string id = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(id))
             {
@@ -23,6 +28,8 @@ namespace Crusaders.Admin.Games
                     TxtOpnt.Text = gm.Opponent;
                     TxtVenue.Text = gm.Venue;
                     TxtComp.Text = gm.Comp;
+                    ResSlc.Value = gm.Result_id.ToString();
+                    PlrSlc.Value = gm.Player_id.ToString();
 
                 }
             }
@@ -39,8 +46,12 @@ namespace Crusaders.Admin.Games
             gm.Opponent = TxtOpnt.Text;
             gm.Venue = TxtVenue.Text;
             gm.Comp = TxtVenue.Text;
+            gm.Result_id = Int32.Parse(ResSlc.Value);
+            gm.Player_id = Int32.Parse(PlrSlc.Value);
+
 
             Global.CrusadersEntitiesDB.UpdateObject(gm);
+            Global.CrusadersEntitiesDB.SaveChanges();
             Response.Redirect("Show.aspx");
         }
 

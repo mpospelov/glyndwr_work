@@ -24,6 +24,28 @@
                 <div class="col-lg-10">
                     <input type="file" id="File1" name="File1" runat="server" class="form-control" />
                 </div>
+                <asp:Label ID="ResLbl" runat="server" Text="Result" CssClass="col-lg-2 control-label"></asp:Label>
+                <div class="col-lg-10">
+                    <select class="form-control" onchange="$('#MainContent_ResSlc').val(this.value)">
+                        <asp:Repeater ID="ResultRepeater" runat="server" OnLoad="Page_Load">
+                            <ItemTemplate>
+                                <option value="<%# Eval("id") %>"><%# Eval("Opponent") %></option>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </select>
+                    <asp:HiddenField ID="ResSlc" runat="server" />
+                </div>
+                <asp:Label ID="PlrLbl" runat="server" Text="Player" CssClass="col-lg-2 control-label"></asp:Label>
+                <div class="col-lg-10">
+                    <select class="form-control" onchange="$('#MainContent_PlrSlc').val(this.value)">
+                        <asp:Repeater ID="PlayerRepeater" runat="server" OnLoad="Page_Load">
+                            <ItemTemplate>
+                                <option value="<%# Eval("id") %>"><%# Eval("FamilyName") %></option>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </select>
+                    <asp:HiddenField ID="PlrSlc" runat="server" />
+                </div>
             </div>
             <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">

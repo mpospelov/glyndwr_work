@@ -41,6 +41,7 @@ namespace Crusaders.Admin.Players
             pl.Position = TxtPst.Text;
 
             Global.CrusadersEntitiesDB.UpdateObject(pl);
+            Global.CrusadersEntitiesDB.SaveChanges();
             Response.Redirect("Show.aspx");
         }
 
