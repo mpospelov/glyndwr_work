@@ -7,7 +7,7 @@
               <p>Venue: <%: one_news.Content %></p>>
             </div>
             <div class="col-md-5">
-              <img class="img-circle img-game" src="/Admin/News/Data/<%:one_news.Image %>" alt="Generic placeholder image">
+              <img class="img-circle img-game"  style="width: 100%;" src="/Admin/News/Data/<%:one_news.Image %>" alt="Generic placeholder image">
             </div>
         </div>
         </form>

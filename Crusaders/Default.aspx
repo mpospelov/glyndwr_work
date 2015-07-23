@@ -11,32 +11,15 @@
         <div class="carousel-inner" role="listbox">
             <div class="item">
                 <img class="first-slide" src="/Images/slide_1.jpg"" alt="First slide">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Example headline.</h1>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                    </div>
-                </div>
+               
             </div>
             <div class="item">
                 <img class="second-slide" src="/Images/slide_2.jpg"" alt="Second slide">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Another example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                    </div>
-                </div>
+              
             </div>
             <div class="item active">
                 <img class="third-slide" src="/Images/slide_3.jpg"" alt="Third slide">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>One more for good measure.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                    </div>
-                </div>
+               
             </div>
         </div>
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -55,7 +38,7 @@
             <asp:Repeater ID="GamesRepeater" runat="server" OnLoad="Page_Load">
                 <ItemTemplate>
                     <div class="col-lg-4">
-                        <img class="img-circle img-game" src="Admin/Games/Data/<%# Eval("Image") %>" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle img-game" src="/Admin/Games/Data/<%# Eval("Image") %>" alt="Generic placeholder image" width="140" height="140">
                         <h2><%# Eval("Opponent") %></h2>
                         <p><%# Eval("Venue") %></p>
                         <p><%# Eval("Comp") %></p>
@@ -72,9 +55,11 @@
                 <div class="col-md-7">
                     <h2><%# Eval("Title") %></h2>
                     <p class="lead"><%# Eval("Content") %></p>
+                <p><a href="/Site/Club/ShowNews.aspx?id=<%# Eval("id") %>" class="btn btn-success">More...</a></p>
+
                 </div>
                 <div class="col-md-5">
-                  <img class="featurette-image img-responsive center-block" src="Admin/News/Data/<%# Eval("Image") %>" /" alt="Generic placeholder image">
+                  <img class="featurette-image img-responsive center-block" src="/Admin/News/Data/<%# Eval("Image") %>" alt="Generic placeholder image">
                 </div>
             </ItemTemplate>
         </asp:Repeater>

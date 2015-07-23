@@ -161,6 +161,15 @@
     <Content Include="Admin\Games\Show.aspx" />
     <Content Include="Admin\Games\Results\Show.aspx" />
     <Content Include="Admin\News\Create.aspx" />
+    <Content Include="Admin\News\Data\Coach.jpg" />
+    <Content Include="Admin\News\Data\heroAccent.png" />
+    <Content Include="Admin\News\Data\keighley %281%29.png" />
+    <Content Include="Admin\News\Data\keighley.png" />
+    <Content Include="Admin\News\Data\news.jpg" />
+    <Content Include="Admin\News\Data\orderedList0.png" />
+    <Content Include="Admin\News\Data\orderedList2.png" />
+    <Content Include="Admin\News\Data\orderedList3.png" />
+    <Content Include="Admin\News\Data\Tulips.jpg" />
     <Content Include="Admin\News\Delete.aspx" />
     <Content Include="Admin\News\Edit.aspx" />
     <Content Include="Admin\News\Show.aspx" />
@@ -635,7 +644,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\News\Data\" />
     <Folder Include="Admin\Players\Data\" />
     <Folder Include="App_Data\" />
     <Folder Include="Data\Games\" />

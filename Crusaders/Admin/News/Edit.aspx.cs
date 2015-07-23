@@ -20,7 +20,7 @@ namespace Crusaders.Admin.News
             {
                 if (!IsPostBack)
                 {
-                    news = Global.CrusadersEntitiesDB().NewsEntities.Where(x => x.Id == int.Parse(id)).Single();
+                    news = db.NewsEntities.Where(x => x.Id == int.Parse(id)).First();
 
                     TxtTlt.Text = news.Title;
                     TxtCnt.Text = news.Content;;
