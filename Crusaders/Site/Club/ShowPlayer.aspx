@@ -11,7 +11,6 @@
               <img class="img-circle img-game" src="/Admin/Players/Data/<%: player.Avatar %>" alt="Generic placeholder image">
             </div>
         </div>
-        <div></div>
         <div class="table-responsive">
             <asp:Repeater ID="GamesRepeater" runat="server" OnLoad="Page_Load">
                 <HeaderTemplate>

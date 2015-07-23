@@ -4,15 +4,15 @@
     <form id="Form" runat="server">
         <div class="row featurette">
             <div class="col-md-7">
-              <h2><%: game.Data  %>  <%: game.Opponent %></h2>
+              <h2><%: game.Data %> <%: game.Opponent %></h2>
               <p>Venue: <%: game.Venue %></p>
               <p>Comp: <%: game.Comp %></p>
             </div>
             <div class="col-md-5">
-              <img class="img-circle img-game" src="/Admin/Players/Data/<%: game.Image %>" alt="Generic placeholder image">
+              <img class="img-circle img-game game-image" src="/Admin/Games/Data/<%: game.Image %>" alt="Generic placeholder image" />
             </div>
         </div>
-        <div></div>
+
         <div class="table-responsive">
             <asp:Repeater ID="PlayersRepeater" runat="server" OnLoad="Page_Load">
                 <HeaderTemplate>

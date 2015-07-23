@@ -49,3 +49,8 @@
     padding-top: 0px;
 }
 @media (max-width: 768px) {.tickets-info-box {margin-right: -30px;}}
+
+.img-circle.game-image{
+    width: 200px;
+    margin-left: 135px;
+}

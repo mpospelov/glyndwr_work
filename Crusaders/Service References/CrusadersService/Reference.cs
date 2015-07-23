@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-
+// Generation date: 23/07/2015 09:46:51
 namespace Crusaders.CrusadersService
 {
     
@@ -979,15 +979,13 @@ namespace Crusaders.CrusadersService
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="content">Initial value of Content.</param>
         /// <param name="title">Initial value of Title.</param>
-        /// <param name="property1">Initial value of Property1.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static NewsEntity CreateNewsEntity(int ID, string content, string title, global::System.DateTime property1)
+        public static NewsEntity CreateNewsEntity(int ID, string content, string title)
         {
             NewsEntity newsEntity = new NewsEntity();
             newsEntity.Id = ID;
             newsEntity.Content = content;
             newsEntity.Title = title;
-            newsEntity.Property1 = property1;
             return newsEntity;
         }
         /// <summary>
@@ -1074,26 +1072,5 @@ namespace Crusaders.CrusadersService
         private string _Title;
         partial void OnTitleChanging(string value);
         partial void OnTitleChanged();
-        /// <summary>
-        /// There are no comments for Property Property1 in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime Property1
-        {
-            get
-            {
-                return this._Property1;
-            }
-            set
-            {
-                this.OnProperty1Changing(value);
-                this._Property1 = value;
-                this.OnProperty1Changed();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _Property1;
-        partial void OnProperty1Changing(global::System.DateTime value);
-        partial void OnProperty1Changed();
     }
 }

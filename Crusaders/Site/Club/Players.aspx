@@ -10,7 +10,7 @@
             <asp:Repeater ID="PlayersRepeater" runat="server" OnLoad="Page_Load">
                 <ItemTemplate>
                     <div class="col-lg-4">
-                        <img class="img-circle img-game" src="Admin/Players/Data/<%# Eval("Avatar") %>" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle img-game" src="/Admin/Players/Data/<%# Eval("Avatar") %>" alt="Generic placeholder image" width="140" height="140">
                         <h2><%# Eval("FamilyName") %></h2>
                         <p><%# Eval("Name") %></p>
                         <p><%# Eval("Number") %></p>

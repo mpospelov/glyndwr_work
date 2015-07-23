@@ -61,7 +61,6 @@
         <Property Name="Image" Type="Edm.String" />
         <Property Name="Content" Type="Edm.String" Nullable="false" />
         <Property Name="Title" Type="Edm.String" Nullable="false" />
-        <Property Name="Property1" Type="Edm.DateTime" Nullable="false" p6:StoreGeneratedPattern="None" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
       </EntityType>
       <Association Name="FK_GameTicket">
         <End Type="CrusadersModel.Game" Role="Game" Multiplicity="0..1" />
